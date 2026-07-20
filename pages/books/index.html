@@ -39,10 +39,9 @@
 
 
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css/bootstrap.min.css">
+ <link rel="stylesheet" href="/assets/css/main.css">
+    
 </head>
 
 <body>
@@ -344,7 +343,6 @@
       <div>
         <svg
           
-          onclick="showMenu()"
           class="menuBar"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -366,7 +364,7 @@
           
         >
           <svg
-            onclick="closeMenu()"
+          class="closeMenuBtn"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -2154,14 +2152,45 @@
         <img src="/assets/images/ENAMADpng.parspng.com_.png" alt="" />
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <!-- ========================================== -->
+<!-- ===== سایدبار سبد خرید ===== -->
+<!-- ========================================== -->
+   <div id="cartSidebar" class="cart-sidebar">
+          <div class="cart-header">
+            <h3 class="font700 fs-4">سبد خرید</h3>
+
+            <span class="font300" id="closeCart">✖</span>
+          </div>
+
+          <div id="cartItems"></div>
+
+          <div class="cart-footer price">
+            <h4
+              class="font700 d-flex justify-content-center align-items-center totalTitle"
+            >
+              قیمت کل:
+              <span id="totalPrice">0 تومان</span>
+            </h4>
+          </div>
+          <div class="d-flex justify-content-between p-4 gap-1">
+            <button class="rounded-2 SeeCartPage">
+              <a
+                class="text-decoration-none text-white"
+                href="/pages/cart/index.html"
+                >مشاهده سبد خرید</a
+              >
+            </button>
+            <button class="rounded-2 SeeOrderPage">تسویه حساب</button>
+          </div>
+        </div>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js/bootstrap.bundle.min.js"></script>
 
+    <script src="/assets/js/main.js"></script> 
+
+    
 
 
 </body>

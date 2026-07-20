@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
@@ -33,14 +33,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      href="/assets/css/bootstrap.min.css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="/assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
   </head>
 
   <body>
@@ -303,7 +299,6 @@
       </div>
       <div>
         <svg
-          onclick="showMenu()"
           class="menuBar"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -322,7 +317,7 @@
 
         <div class="menu">
           <svg
-            onclick="closeMenu()"
+            class="closeMenuBtn"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -359,32 +354,95 @@
     </header>
     <main class="d-flex flex-column">
       <section class="hero">
-        <div class="swiper heroSwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
               <a href="/page1">
-                <img src="/assets/images/Header28-scaled.jpg" alt="" />
+                <img
+                  src="/assets/images/Header28-scaled.jpg"
+                  class="d-block w-100"
+                  alt=""
+                />
               </a>
             </div>
-
-            <div class="swiper-slide">
+            <div class="carousel-item">
               <a href="/page2">
-                <img src="/assets/images/Header29-scaled.jpg" alt="" />
+                <img
+                  src="/assets/images/Header29-scaled.jpg"
+                  class="d-block w-100"
+                  alt=""
+                />
               </a>
             </div>
-
-            <div class="swiper-slide">
+            <div class="carousel-item">
               <a href="/page3">
-                <img src="/assets/images/Header30.jpg" alt="" />
+                <img
+                  src="/assets/images/Header30.jpg"
+                  class="d-block w-100"
+                  alt=""
+                />
               </a>
             </div>
-
-            <div class="swiper-slide">
+            <div class="carousel-item">
               <a href="/page4">
-                <img src="/assets/images/Header32-scaled.jpg" alt="" />
+                <img
+                  src="/assets/images/Header32-scaled.jpg"
+                  class="d-block w-100"
+                  alt=""
+                />
               </a>
             </div>
           </div>
+
+          <!-- دکمه قبلی - بسیار کوچیک -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+            style="
+              width: 30px;
+              height: 30px;
+              background: rgba(0, 0, 0, 0.5);
+              border-radius: 50%;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 10px;
+              border: none;
+            "
+          >
+            <span
+              class="carousel-control-prev-icon"
+              aria-hidden="true"
+              style="width: 15px; height: 15px"
+            ></span>
+            <span class="visually-hidden">قبلی</span>
+          </button>
+
+          <!-- دکمه بعدی - بسیار کوچیک -->
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+            style="
+              width: 30px;
+              height: 30px;
+              background: rgba(0, 0, 0, 0.5);
+              border-radius: 50%;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 10px;
+              border: none;
+            "
+          >
+            <span
+              class="carousel-control-next-icon"
+              aria-hidden="true"
+              style="width: 15px; height: 15px"
+            ></span>
+            <span class="visually-hidden">بعدی</span>
+          </button>
         </div>
       </section>
       <section
@@ -2652,6 +2710,591 @@
             </ul>
           </nav>
         </div>
+        <nav>
+          <ul class="products">
+            <li
+              class="product-cart position-relative d-flex flex-column gap-3 rounded-3"
+            >
+              <a href="">
+                <img
+                  class="whiteBookImage"
+                  src="../assets/images/sonat_co1-300x450.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a class="text-decoration-none productTitle mainText" href="">
+                  کارل مارکس و سنت اندیشهٔ سیاسی در غرب</a
+                >
+              </div>
+              <div>
+                <div>
+                  <span class="font300 translaterText">نویسنده:</span>
+                  <strong>هانا ارنت</strong>
+                </div>
+                <div>
+                  <span class="font300 translaterText">مترجم:</span>
+                  <strong> عزت الله فولادوند</strong>
+                </div>
+              </div>
+              <span class="price">340000 تومان</span>
+              <span
+                class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
+                ><a class="text-decoration-none text-white add-cart" href=""
+                  >افزودن به سبد خرید</a
+                ></span
+              >
+              <div
+                class="heartSvg bg-white px-2 py-2 d-none justify-content-center align-items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                  />
+                </svg>
+              </div>
+            </li>
+            <li
+              class="product-cart position-relative d-flex flex-column gap-3 rounded-3"
+            >
+              <a href="">
+                <img
+                  class="bookImage"
+                  src="../assets/images/baran_co1-300x450.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  class="text-decoration-none productTitle mainText"
+                  mainText
+                  text-decoration-none
+                  productTitle
+                  href=""
+                >
+                  بشنو از باران</a
+                >
+              </div>
+
+              <div>
+                <div>
+                  <span class="font300 translaterText">نویسنده:</span>
+                  <strong> میشل ابر</strong>
+                </div>
+                <div>
+                  <span class="font300 translaterText">مترجم:</span>
+                  <strong> قاسم مٍِؤمنی</strong>
+                </div>
+              </div>
+              <span class="price">110000 تومان</span>
+              <span
+                class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
+                ><a class="text-decoration-none text-white add-cart" href=""
+                  >افزودن به سبد خرید</a
+                ></span
+              >
+              <div
+                class="heartSvg bg-white px-2 py-2 d-none justify-content-center align-items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                  />
+                </svg>
+              </div>
+            </li>
+            <li
+              class="product-cart position-relative d-flex flex-column gap-3 rounded-3"
+            >
+              <a href="">
+                <img
+                  class="bookImage"
+                  src="../assets/images/ghute_co1-300x450.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  class="text-decoration-none productTitle mainText"
+                  mainText
+                  text-decoration-none
+                  productTitle
+                  href=""
+                >
+                  غوطه در اب</a
+                >
+              </div>
+
+              <div>
+                <div>
+                  <span class="bookTitle">نویسنده:</span>
+                  <strong> لیدیا چوکوفسکایا</strong>
+                </div>
+                <div>
+                  <span class="font300 translaterText">مترجم:</span>
+                  <strong> آبتین گلکار</strong>
+                </div>
+              </div>
+              <span>اتمام چاپ </span>
+              <span
+                class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
+                ><a class="text-decoration-none text-white" href="">
+                  اطلاعات بیشتر
+                </a></span
+              >
+              <div
+                class="heartSvg bg-white px-2 py-2 d-none justify-content-center align-items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                  />
+                </svg>
+              </div>
+            </li>
+            <li
+              class="product-cart position-relative d-flex flex-column gap-3 rounded-3"
+            >
+              <a href="">
+                <img
+                  class="bookImage"
+                  src="../assets/images/flsfmvjh_co1-300x450.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  class="text-decoration-none productTitle mainText"
+                  mainText
+                  text-decoration-none
+                  productTitle
+                  href=""
+                >
+                  فلسفه‌ی مواجهه با دیگری
+                </a>
+              </div>
+
+              <div>
+                <div>
+                  <span class="bookTitle">نویسنده:</span>
+                  <strong> شارل چین</strong>
+                </div>
+                <div>
+                  <span class="font300 translaterText">مترجم:</span>
+                  <strong> قاسم مٍِؤمنی</strong>
+                </div>
+              </div>
+              <span class="price">330000 تومان</span>
+              <span
+                class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
+                ><a class="text-decoration-none text-white add-cart" href=""
+                  >افزودن به سبد خرید</a
+                ></span
+              >
+              <div
+                class="heartSvg bg-white px-2 py-2 d-none justify-content-center align-items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                  />
+                </svg>
+              </div>
+            </li>
+            <li
+              class="product-cart position-relative d-flex flex-column gap-3 rounded-3"
+            >
+              <a href="">
+                <img
+                  class="bookImage"
+                  src="../assets/images/fesad_co1-300x450.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  class="text-decoration-none productTitle mainText"
+                  mainText
+                  text-decoration-none
+                  productTitle
+                  href=""
+                >
+                  فساد</a
+                >
+              </div>
+
+              <div>
+                <div>
+                  <span class="bookTitle">نویسنده:</span>
+                  <strong> لزلی هولمز</strong>
+                </div>
+
+                <div>
+                  <span class="font300 translaterText">مترجم:</span>
+                  <strong> مصطفی رضایی</strong>
+                </div>
+              </div>
+              <span class="price">420000 تومان</span>
+              <span
+                class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
+                ><a class="text-decoration-none text-white add-cart" href=""
+                  >افزودن به سبد خرید</a
+                ></span
+              >
+              <div
+                class="heartSvg bg-white px-2 py-2 d-none justify-content-center align-items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                  />
+                </svg>
+              </div>
+            </li>
+            <li
+              class="product-cart position-relative d-flex flex-column gap-3 rounded-3"
+            >
+              <a href="">
+                <img
+                  class="whiteBookImage"
+                  src="../assets/images/sonat_co1-300x450.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  class="text-decoration-none productTitle mainText"
+                  mainText
+                  text-decoration-none
+                  productTitle
+                  href=""
+                >
+                  کارل مارکس و سنت اندیشهٔ سیاسی در غرب</a
+                >
+              </div>
+              <div>
+                <div>
+                  <span class="font300 translaterText">نویسنده:</span>
+                  <strong>هانا ارنت</strong>
+                </div>
+                <div>
+                  <span class="font300 translaterText">مترجم:</span>
+                  <strong> عزت الله فولادوند</strong>
+                </div>
+              </div>
+              <span class="price">340000 تومان</span>
+              <span
+                class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
+                ><a class="text-decoration-none text-white add-cart" href=""
+                  >افزودن به سبد خرید</a
+                ></span
+              >
+              <div
+                class="heartSvg bg-white px-2 py-2 d-none justify-content-center align-items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                  />
+                </svg>
+              </div>
+            </li>
+            <li
+              class="product-cart position-relative d-flex flex-column gap-3 rounded-3"
+            >
+              <a href="">
+                <img
+                  class="bookImage"
+                  src="../assets/images/baran_co1-300x450.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  class="text-decoration-none productTitle mainText"
+                  mainText
+                  text-decoration-none
+                  productTitle
+                  href=""
+                >
+                  بشنو از باران</a
+                >
+              </div>
+
+              <div>
+                <div>
+                  <span class="font300 translaterText">نویسنده:</span>
+                  <strong> میشل ابر</strong>
+                </div>
+                <div>
+                  <span class="font300 translaterText">مترجم:</span>
+                  <strong> قاسم مٍِؤمنی</strong>
+                </div>
+              </div>
+              <span class="price">110000 تومان</span>
+              <span
+                class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
+                ><a class="text-decoration-none text-white add-cart" href=""
+                  >افزودن به سبد خرید</a
+                ></span
+              >
+              <div
+                class="heartSvg bg-white px-2 py-2 d-none justify-content-center align-items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                  />
+                </svg>
+              </div>
+            </li>
+            <li
+              class="product-cart position-relative d-flex flex-column gap-3 rounded-3"
+            >
+              <a href="">
+                <img
+                  class="bookImage"
+                  src="../assets/images/ghute_co1-300x450.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  class="text-decoration-none productTitle mainText"
+                  mainText
+                  text-decoration-none
+                  productTitle
+                  href=""
+                >
+                  غوطه در اب</a
+                >
+              </div>
+
+              <div>
+                <div>
+                  <span class="bookTitle">نویسنده:</span>
+                  <strong> لیدیا چوکوفسکایا</strong>
+                </div>
+                <div>
+                  <span class="font300 translaterText">مترجم:</span>
+                  <strong> آبتین گلکار</strong>
+                </div>
+              </div>
+              <span>اتمام چاپ </span>
+              <span
+                class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
+                ><a class="text-decoration-none text-white" href="">
+                  اطلاعات بیشتر
+                </a></span
+              >
+              <div
+                class="heartSvg bg-white px-2 py-2 d-none justify-content-center align-items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                  />
+                </svg>
+              </div>
+            </li>
+            <li
+              class="product-cart position-relative d-flex flex-column gap-3 rounded-3"
+            >
+              <a href="">
+                <img
+                  class="bookImage"
+                  src="../assets/images/flsfmvjh_co1-300x450.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  class="text-decoration-none productTitle mainText"
+                  mainText
+                  text-decoration-none
+                  productTitle
+                  href=""
+                >
+                  فلسفه‌ی مواجهه با دیگری
+                </a>
+              </div>
+
+              <div>
+                <div>
+                  <span class="bookTitle">نویسنده:</span>
+                  <strong> شارل چین</strong>
+                </div>
+                <div>
+                  <span class="font300 translaterText">مترجم:</span>
+                  <strong> قاسم مٍِؤمنی</strong>
+                </div>
+              </div>
+              <span class="price">330000 تومان</span>
+              <span
+                class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
+                ><a class="text-decoration-none text-white add-cart" href=""
+                  >افزودن به سبد خرید</a
+                ></span
+              >
+              <div
+                class="heartSvg bg-white px-2 py-2 d-none justify-content-center align-items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                  />
+                </svg>
+              </div>
+            </li>
+            <li
+              class="product-cart position-relative d-flex flex-column gap-3 rounded-3"
+            >
+              <a href="">
+                <img
+                  class="bookImage"
+                  src="../assets/images/fesad_co1-300x450.jpg"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a
+                  class="text-decoration-none productTitle mainText mainText"
+                  href=""
+                >
+                  فساد</a
+                >
+              </div>
+
+              <div>
+                <div>
+                  <span class="bookTitle">نویسنده:</span>
+                  <strong> لزلی هولمز</strong>
+                </div>
+
+                <div>
+                  <span class="font300 translaterText">مترجم:</span>
+                  <strong> مصطفی رضایی</strong>
+                </div>
+              </div>
+              <span class="price">420000 تومان</span>
+              <span
+                class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
+                ><a class="text-decoration-none text-white add-cart" href=""
+                  >افزودن به سبد خرید</a
+                ></span
+              >
+              <div
+                class="heartSvg bg-white px-2 py-2 d-none justify-content-center align-items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                  />
+                </svg>
+              </div>
+            </li>
+          </ul>
+        </nav>
       </section>
       <section
         class="d-flex flex-column gap-3 justify-content-center align-items-center"
@@ -2868,10 +3511,8 @@
         <img src="../assets/images/ENAMADpng.parspng.com_.png" alt="" />
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../assets/js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
