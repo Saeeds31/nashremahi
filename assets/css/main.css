@@ -121,12 +121,11 @@ header.fixed {
   color: #54595f;
 }
 .addToCartBtn {
-  position: absolute;
   background-color: var(--main-color);
   width: 90%;
-  bottom: 10px;
-  right: 10px;
   padding: 6px 10px;
+  display: flex !important;
+  margin: 0 auto;
 }
 #allResult {
   width: 250px;
@@ -169,7 +168,7 @@ header.fixed {
   font-size: 30px;
 }
 .product-cart:has(.discountBox) {
-  height: 480px;
+  height: 540px;
 }
 
 .product-cart.hasDiscount:hover {
@@ -497,7 +496,6 @@ img {
 
 .product-cart:hover {
   background-color: #e3e1e1 !important;
-  height: 490px !important;
   opacity: 1;
   transition: 0.3s;
   z-index: 10;
@@ -508,18 +506,11 @@ img {
   color: var(--main-color);
   border-radius: 50%;
   position: absolute;
-  top: 0;
-  left: 0;
-}
-.product-cart:hover .heartSvg {
+  top: 8px;
+  left: 8px;
   display: flex !important;
-  transition: 0.3s;
 }
 
-.product-cart:hover .shopping {
-  display: flex !important;
-  transition: 0.8s;
-}
 .price {
   text-align: left;
 }
@@ -706,7 +697,7 @@ img {
   font-size: small;
   padding: 18px;
   background-color: #f2f2f2;
-  height: 460px;
+  height: 500px;
 }
 .product-cart div:has(a) {
   min-height: 50px;
@@ -764,7 +755,7 @@ img {
 
   top: 0;
 
-  left: -400px;
+  left: -100vw;
 
   background: white;
 
@@ -1244,7 +1235,6 @@ img {
   font-weight: 700;
   color: var(--main-color);
 }
-
 
 /* هدر قهرمان */
 #heroSectionContact {
@@ -2018,6 +2008,10 @@ textarea.form-control-custom {
 }
 
 @media (max-width: 480px) {
+  .addToCartBtn {
+    font-size: 12px;
+    width: 100%;
+  }
   #logo-img {
     width: 80px;
     height: 40px;
@@ -2108,7 +2102,7 @@ textarea.form-control-custom {
   }
   .product-cart {
     font-weight: 600;
-    min-height: 450px !important;
+    min-height: 465px !important;
   }
   .input-item {
     width: 250px !important;

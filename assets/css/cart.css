@@ -1,0 +1,1197 @@
+:root {
+  --main-color: #f97321;
+  --main-color-dark: #e0651a;
+  --main-color-light: #fef0e8;
+  --main-bg: #f8f9fa;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --card-radius: 16px;
+}
+
+/* ===== صفحه اصلی ===== */
+.cart-main {
+  padding: 24px 16px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== عنوان صفحه ===== */
+.cart-page-title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.cart-page-title h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  position: relative;
+  display: inline-block;
+}
+
+.cart-page-title h1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 60px;
+  height: 3px;
+  background: var(--main-color);
+  border-radius: 2px;
+}
+
+/* ===== مراحل ===== */
+.steps-container {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 24px 32px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 32px;
+  border: 1px solid #f0f0f0;
+}
+
+.steps-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+  cursor: default;
+}
+
+.step-item.active {
+  opacity: 1;
+}
+
+.step-item.done {
+  opacity: 0.7;
+}
+
+.step-item.done .step-number {
+  background: #2ecc71;
+  color: #fff;
+}
+
+.step-item.active .step-number {
+  background: var(--main-color);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(249, 115, 33, 0.3);
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e8e8e8;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.step-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #1a1a2e;
+  white-space: nowrap;
+}
+
+.step-line {
+  width: 40px;
+  height: 2px;
+  background: #e8e8e8;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.step-line.active {
+  background: var(--main-color);
+}
+
+/* ===== محتوای مراحل ===== */
+.step-content {
+  display: none;
+  animation: fadeInUp 0.4s ease;
+}
+
+.step-content.active {
+  display: block !important;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===== آیتم‌های سبد خرید ===== */
+.cart-items-wrapper {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #f0f0f0;
+  min-height: 200px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item img {
+  width: 70px;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background: #f5f5f5;
+}
+
+.cart-item .main-item {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cart-item .item-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1a1a2e;
+  margin: 0;
+  flex: 1;
+  min-width: 120px;
+}
+
+.cart-item .item-number {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-item .item-number input {
+  width: 56px;
+  padding: 6px 8px;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: border-color 0.3s;
+}
+
+.cart-item .item-number input:focus {
+  border-color: var(--main-color);
+  outline: none;
+}
+
+.cart-item .item-number .price {
+  font-weight: 700;
+  color: var(--main-color);
+  font-size: 0.95rem;
+  min-width: 80px;
+  text-align: left;
+}
+
+/* ===== سبد خالی ===== */
+.empty-cart {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.empty-cart svg {
+  color: #ddd;
+  margin-bottom: 16px;
+}
+
+.empty-cart h3 {
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.empty-cart p {
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.empty-cart .btn-shop {
+  display: inline-block;
+  background: var(--main-color);
+  color: #fff;
+  padding: 10px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.empty-cart .btn-shop:hover {
+  background: var(--main-color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 115, 33, 0.3);
+}
+
+/* ===== کوپن و بروزرسانی ===== */
+.cart-actions-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 16px 20px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #f0f0f0;
+}
+
+.coupon-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.coupon-box input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s;
+  min-width: 120px;
+}
+
+.coupon-box input:focus {
+  border-color: var(--main-color);
+  outline: none;
+}
+
+.coupon-box button {
+  background: var(--main-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.coupon-box button:hover {
+  background: var(--main-color-dark);
+}
+
+.btn-update {
+  background: #1a1a2e;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.btn-update:hover {
+  background: #2d2d4a;
+}
+
+/* ===== خلاصه سبد خرید ===== */
+.cart-summary-card {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #f0f0f0;
+  position: sticky;
+  top: 20px;
+}
+
+.cart-summary-card .summary-title {
+  font-weight: 800;
+  color: #1a1a2e;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.summary-row .price-value {
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.summary-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 12px 0;
+}
+
+.shipping-section {
+  padding: 4px 0;
+}
+
+.shipping-label {
+  display: block;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.shipping-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+}
+
+.shipping-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--main-color);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.shipping-option .shipping-detail {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.shipping-option .shipping-detail strong {
+  color: #1a1a2e;
+}
+
+.shipping-option .shipping-detail span {
+  color: #666;
+}
+
+.address-change {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  margin-top: 4px;
+}
+
+.address-change .address-text {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.address-change a {
+  color: var(--main-color);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.address-change a:hover {
+  text-decoration: underline;
+}
+
+/* فرم تغییر آدرس */
+.address-form {
+  display: none;
+  margin-top: 12px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.address-form select,
+.address-form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: #fff;
+  transition: border-color 0.3s;
+}
+
+.address-form select:focus,
+.address-form input:focus {
+  border-color: var(--main-color);
+  outline: none;
+}
+
+.address-form .btn-address-update {
+  width: 100%;
+  padding: 10px;
+  background: var(--main-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.address-form .btn-address-update:hover {
+  background: var(--main-color-dark);
+}
+
+/* مجموع */
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.summary-total .total-label {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #1a1a2e;
+}
+
+.summary-total .total-price {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--main-color);
+}
+
+/* دکمه پرداخت */
+.btn-checkout {
+  width: 100%;
+  padding: 14px;
+  background: var(--main-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 16px;
+}
+
+.btn-checkout:hover {
+  background: var(--main-color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(249, 115, 33, 0.3);
+}
+
+/* ===== مرحله 2: تسویه حساب ===== */
+.checkout-wrapper {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #f0f0f0;
+}
+
+.checkout-alert {
+  background: #e8f0fe;
+  padding: 14px 20px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.checkout-alert span {
+  color: #1a1a2e;
+  font-weight: 600;
+}
+
+.checkout-alert a {
+  color: var(--main-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.checkout-alert a:hover {
+  text-decoration: underline;
+}
+
+/* فرم اطلاعات */
+.billing-form {
+  padding: 4px 0;
+}
+
+.billing-form .form-title {
+  font-weight: 800;
+  color: #1a1a2e;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.form-group .form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s;
+  background: #fafafa;
+}
+
+.form-group .form-control:focus {
+  border-color: var(--main-color);
+  outline: none;
+  background: #fff;
+}
+
+.form-group textarea.form-control {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-checkbox {
+  margin-bottom: 14px;
+}
+
+.form-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--main-color);
+}
+
+.form-checkbox span {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.coupon-toggle {
+  margin: 16px 0 8px;
+  font-size: 0.95rem;
+}
+
+.coupon-toggle a {
+  color: var(--main-color);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.coupon-toggle a:hover {
+  text-decoration: underline;
+}
+
+.coupon-form {
+  display: none;
+  margin-top: 12px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.coupon-form p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.coupon-input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.coupon-input-group .form-control {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.coupon-input-group .form-control:focus {
+  border-color: var(--main-color);
+  outline: none;
+}
+
+.coupon-input-group .btn-apply-coupon {
+  background: var(--main-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.coupon-input-group .btn-apply-coupon:hover {
+  background: var(--main-color-dark);
+}
+
+/* ===== خلاصه سفارش (مرحله 2) ===== */
+.order-summary-card {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #f0f0f0;
+}
+
+.order-summary-title {
+  font-weight: 800;
+  color: #1a1a2e;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.order-items {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+}
+
+.order-items::-webkit-scrollbar {
+  width: 4px;
+}
+
+.order-items::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 2px;
+}
+
+.cardBookCart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f5f5f5;
+  gap: 12px;
+}
+
+.cardBookCart:last-child {
+  border-bottom: none;
+}
+
+.cardBookCart img {
+  width: 40px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.cardBookCart .item-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #1a1a2e;
+  margin: 0;
+  flex: 1;
+}
+
+.cardBookCart input[type="number"] {
+  width: 44px;
+  padding: 4px 6px;
+  border: 2px solid #e8e8e8;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.cardBookCart input[type="number"]:focus {
+  border-color: var(--main-color);
+  outline: none;
+}
+
+.cardBookCart .price {
+  font-weight: 700;
+  color: var(--main-color);
+  font-size: 0.85rem;
+  min-width: 60px;
+  text-align: left;
+}
+
+/* روش پرداخت */
+.payment-methods {
+  margin: 16px 0;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.payment-method {
+  padding: 14px 16px;
+}
+
+.payment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment-header label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.payment-header label input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--main-color);
+}
+
+.payment-header label span {
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.payment-header img {
+  height: 32px;
+  object-fit: contain;
+}
+
+.payment-desc {
+  margin-top: 8px;
+  padding-right: 32px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.privacy-text {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 12px 0 16px;
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.privacy-text a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.privacy-text a:hover {
+  text-decoration: underline;
+}
+
+.btn-place-order {
+  width: 100%;
+  padding: 14px;
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-place-order:hover {
+  background: #219a52;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(39, 174, 96, 0.3);
+}
+
+/* ===== مرحله 3: تاییدیه ===== */
+.confirm-wrapper {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 40px 32px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #f0f0f0;
+  text-align: center;
+}
+
+.confirm-icon {
+  font-size: 4rem;
+  margin-bottom: 12px;
+}
+
+.confirm-title {
+  font-weight: 800;
+  color: #1a1a2e;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.confirm-sub {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 32px;
+}
+
+.confirm-details {
+  text-align: right;
+  max-width: 500px;
+  margin: 0 auto 32px;
+}
+
+.cartPageBox {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.confirm-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.confirm-row:last-child {
+  border-bottom: none;
+}
+
+.confirm-row .label {
+  color: #666;
+  font-weight: 600;
+}
+
+.confirm-row .value {
+  color: #1a1a2e;
+  font-weight: 700;
+}
+
+.confirm-row .value.addressValue {
+  max-width: 200px;
+  word-break: break-word;
+  text-align: left;
+}
+
+.confirm-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  margin-top: 8px;
+  border-top: 2px solid var(--main-color);
+}
+
+.confirm-total .label {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #1a1a2e;
+}
+
+.confirm-total .value {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--main-color);
+}
+
+.confirm-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.confirm-actions .btn-back {
+  padding: 12px 32px;
+  background: #e8e8e8;
+  color: #666;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.confirm-actions .btn-back:hover {
+  background: #ddd;
+}
+
+.confirm-actions .btn-finalize {
+  padding: 12px 40px;
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.confirm-actions .btn-finalize:hover {
+  background: #219a52;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
+}
+
+/* ===== واکنش‌گرایی ===== */
+@media (max-width: 991px) {
+  .cart-summary-card {
+    position: static;
+  }
+
+  .steps-container {
+    padding: 16px 20px;
+  }
+
+  .step-label {
+    font-size: 0.75rem;
+  }
+
+  .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+
+  .step-line {
+    width: 24px;
+  }
+
+  .checkout-wrapper {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-main {
+    padding: 16px 8px 40px;
+  }
+
+  .cart-page-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px 0;
+  }
+
+  .cart-item img {
+    width: 80px;
+    height: 108px;
+    align-self: center;
+  }
+
+  .cart-item .main-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .cart-item .item-title {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .cart-item .item-number {
+    justify-content: center;
+  }
+
+  .cart-actions-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px 16px;
+  }
+
+  .coupon-box {
+    flex-direction: column;
+  }
+
+  .coupon-box input {
+    width: 100%;
+  }
+
+  .coupon-box button {
+    width: 100%;
+  }
+
+  .btn-update {
+    width: 100%;
+  }
+
+  .steps-wrapper {
+    gap: 2px;
+  }
+
+  .step-item {
+    padding: 4px 8px;
+  }
+
+  .step-label {
+    display: none;
+  }
+
+  .step-line {
+    width: 16px;
+  }
+
+  .cart-summary-card {
+    padding: 16px;
+  }
+
+  .checkout-wrapper {
+    padding: 12px;
+  }
+
+  .billing-form .form-title {
+    font-size: 1rem;
+  }
+
+  .order-summary-card {
+    padding: 16px;
+  }
+
+  .cardBookCart {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .cardBookCart .item-title {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .confirm-wrapper {
+    padding: 24px 16px;
+  }
+
+  .confirm-title {
+    font-size: 1.2rem;
+  }
+
+  .cartPageBox {
+    padding: 12px 16px;
+  }
+
+  .confirm-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .confirm-actions .btn-back,
+  .confirm-actions .btn-finalize {
+    width: 100%;
+    text-align: center;
+  }
+
+  .coupon-input-group {
+    flex-direction: column;
+  }
+
+  .coupon-input-group .btn-apply-coupon {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .payment-header {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-item img {
+    width: 60px;
+    height: 80px;
+  }
+
+  .cart-item .item-title {
+    font-size: 0.8rem;
+  }
+
+  .cart-item .item-number input {
+    width: 44px;
+    padding: 4px 6px;
+    font-size: 0.8rem;
+  }
+
+  .cart-item .item-number .price {
+    font-size: 0.85rem;
+    min-width: 60px;
+  }
+
+  .cart-summary-card .summary-title {
+    font-size: 0.95rem;
+  }
+
+  .summary-total .total-price {
+    font-size: 1rem;
+  }
+
+  .btn-checkout {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .order-summary-title {
+    font-size: 0.95rem;
+  }
+
+  .confirm-row .value.addressValue {
+    max-width: 120px;
+  }
+}
