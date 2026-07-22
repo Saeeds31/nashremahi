@@ -39,9 +39,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap 5 CSS -->
-        <link rel="stylesheet" href="/assets/css/bootstrap.min.css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
     
   </head>
   <style>
@@ -3327,7 +3327,7 @@
         <a href="/pages/index.html">
           <img
             id="logo-img"
-            src="/assets/images/MAHI--e1662605437200.png"
+            src="../../assets/images/MAHI--e1662605437200.png"
             alt=""
         /></a>
         <nav id="headerMenu" class="d-none d-lg-block mt-3">
@@ -3594,7 +3594,7 @@
 
         <div class="menu">
           <svg
-          class="closeMenuBtn"
+          class="closeMenuBtn cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -3604,7 +3604,6 @@
             stroke-width="2.5"
             stroke-linecap="round"
             stroke-linejoin="round"
-            style="cursor: pointer"
           >
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -4091,7 +4090,7 @@
       <div class="footer-info">
         <img
           class="footer-logo"
-          src="/assets/images/Layer-2-qy860f9n9hligu3alwybvfm4gkeue7pd5i6wmmsw74.png"
+          src="../../assets/images/Layer-2-qy860f9n9hligu3alwybvfm4gkeue7pd5i6wmmsw74.png"
           alt=""
         />
 
@@ -4178,7 +4177,7 @@
       </div>
 
       <div class="enamad mt-5">
-        <img src="/assets/images/ENAMADpng.parspng.com_.png" alt="" />
+        <img src="../../assets/images/ENAMADpng.parspng.com_.png" alt="" />
       </div>
     </footer>
 
@@ -4248,21 +4247,21 @@
 
           if (cart.length === 0) {
             orderItemsEl.innerHTML =
-              '<p style="text-align: center; color: #999;">سبد خرید خالی است</p>';
+              '<p class="emptyCart">سبد خرید خالی است</p>';
             return;
           }
 
           let html = "";
           cart.forEach((item) => {
             html += `
-                        <div style="display:flex; justify-content:space-between; align-items:center; padding:15px 0; border-bottom:1px solid #eee;">
+                        <div class="cardBookCart">
                             <div class="d-flex justify-content-center align-items-center gap-4">
-                                <img src="${item.image}" alt="" style="width:60px; height:80px; object-fit:cover; border-radius:6px;">
-                                <h4 class="item-title" style="margin:0; font-size:16px;">${item.title}</h4>
+                                <img src="${item.image}" alt="" >
+                                <h4 class="item-title" >${item.title}</h4>
                             </div>
-                            <div class="d-flex justify-content-center align-items-center" style="gap:20px;">
-                                <input type="number" value="1" min="1" style="width:50px; padding:5px; border:1px solid #ddd; border-radius:4px; text-align:center;">
-                                <div class="price" style="font-weight:bold;">${item.price}</div>
+                            <div class="d-flex justify-content-center align-items-center gap-20" >
+                                <input type="number" value="1" min="1" >
+                                <div class="price" >${item.price}</div>
                             </div>
                         </div>
                     `;
@@ -4402,7 +4401,7 @@
 
           if (confirmDetailsEl) {
             confirmDetailsEl.innerHTML = `
-                        <div style="background:#f9f9f9; padding:20px; border-radius:8px; max-width: 100%; overflow: hidden;">
+                        <div class="cartPageBox">
                             <div class="confirm-row">
                                 <span class="label">تعداد محصولات</span>
                                 <span class="value">${cart.length} عدد</span>
@@ -4417,7 +4416,7 @@
                             </div>
                             <div class="confirm-row">
                                 <span class="label">آدرس</span>
-                                <span class="value" style="text-align: left; direction: rtl;">${address}</span>
+                                <span class="value addressValue" >${address}</span>
                             </div>
                             <div class="confirm-total">
                                 <span class="label">مبلغ قابل پرداخت</span>
@@ -4540,7 +4539,7 @@
         document.getElementById("coupon_code").value = "";
       }
     </script>
-    <script src="/assets/js/main.js"></script>
+    <script src="../../assets/js/main.js"></script>
 
     <script src="../../assets/js/cart.js"></script>
     <script src="cart.js"></script>
@@ -4548,8 +4547,8 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <script src="/assets/js/bootstrap.min.js/bootstrap.bundle.min.js"></script>
-<script src="/assets/js/bootstrap.min.js/swiper-bundle.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="../../assets/js/bootstrap.min.js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/bootstrap.min.js/swiper-bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
    </body>
 </html>

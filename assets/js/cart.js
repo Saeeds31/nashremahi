@@ -121,9 +121,9 @@ function showConfirmDetails() {
             <div class="row"><span>قیمت کل</span><span>${subtotal.toLocaleString()} تومان</span></div>
             <div class="row"><span>روش ارسال</span><span>${shippingText}</span></div>
             <div class="row"><span>آدرس</span><span>${address}</span></div>
-            <div class="row" style="font-size: 20px; font-weight: bold; border-top: 2px solid #ddd; padding-top: 15px; margin-top: 10px;">
+            <div class="row finalRow">
                 <span>مبلغ قابل پرداخت</span>
-                <span style="color: #f97321;">${total.toLocaleString()} تومان</span>
+                <span class="mainText">${total.toLocaleString()} تومان</span>
             </div>
         `;
     }

@@ -35,7 +35,12 @@
 
 * {
   font-family: "yekanbakh";
+}
+:root {
   --main-color: #f97321;
+  --main-color-dark: #e0651a;
+  --main-color-light: #fef0e8;
+  --main-color-rgb: 249, 115, 33;
 }
 .mainText {
   color: var(--main-color);
@@ -106,7 +111,9 @@ header.fixed {
   color: inherit;
   text-decoration: none;
   border-bottom: 3px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
   padding-bottom: 10px;
 }
 .headerTitle {
@@ -467,8 +474,6 @@ img {
   font-size: clamp(22px, 2.5vw, 26px);
 }
 
-
-
 .products {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -810,12 +815,19 @@ img {
   width: 100px;
   height: 140px !important;
 }
+.cartItemImage .cartItemMainDiv {
+  height: 100px;
+}
 .price_item {
   position: absolute;
   right: 130px;
   bottom: 0px;
   color: black;
   gap: 2px;
+}
+.priceCartItem {
+  color: #e3e1e1;
+  display: flex;
 }
 .remove {
   position: absolute;
@@ -982,6 +994,585 @@ img {
   padding-bottom: 10px;
   font-size: 24px;
 }
+.carousel-control-prev {
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  border: none;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 15px;
+  height: 15px;
+}
+.carousel-control-next {
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  border: none;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.emptyCart {
+  text-align: center;
+  color: #999;
+}
+.cardBookCart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+.cardBookCart img {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.cardBookCart h4 {
+  margin: 0;
+  font-size: 16px;
+}
+.cardBookCart .price {
+  font-weight: bold;
+}
+.cardBookCart input {
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+.gap-20 {
+  gap: 20px;
+}
+.cartPageBox {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 100%;
+  overflow: hidden;
+}
+.addressValue {
+  text-align: left;
+  direction: rtl;
+}
+.finalRow {
+  font-size: 20px;
+  font-weight: bold;
+  border-top: 2px solid #ddd;
+  padding-top: 15px;
+  margin-top: 10px;
+}
+.login-phone-card {
+  max-width: 480px;
+  margin: 0 auto;
+}
+.input-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background: #f9f9f9;
+}
+.input-item:focus {
+  border-color: var(--main-color);
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(26, 26, 46, 0.1);
+}
+.input-item-code {
+  letter-spacing: 12px;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 700;
+}
+.btn-login {
+  background-color: var(--main-color);
+  border: none;
+  color: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  width: 100%;
+  opacity: 0.85;
+}
+.btn-login:hover {
+  opacity: 1;
+}
+.btn-login-outline,
+.link-action {
+  background: transparent;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.3s;
+  width: auto;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+}
+.btn-login-outline:hover,
+.link-action:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+.step-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.step-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ddd;
+  transition: all 0.3s;
+}
+.step-dot.active {
+  background: var(--main-color);
+  width: 30px;
+  border-radius: 5px;
+}
+.step-dot.done {
+  background: var(--main-color);
+}
+.step-line {
+  width: 40px;
+  height: 2px;
+  background: #ddd;
+}
+.step-line.active {
+  background: var(--main-color);
+}
+.phone-display {
+  background: #f0f0f5;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.otp-container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  direction: ltr;
+}
+.otp-input {
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s;
+  background: #f9f9f9;
+}
+.otp-input:focus {
+  border-color: var(--main-color);
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(26, 26, 46, 0.1);
+}
+.otp-input.filled {
+  border-color: var(--main-color);
+  background: #fff;
+}
+.form-step {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+.form-step.active {
+  display: block;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.login-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+.login-divider::before,
+.login-divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+.login-divider::before {
+  margin-left: 16px;
+}
+.login-divider::after {
+  margin-right: 16px;
+}
+.login-divider span {
+  color: #999;
+  font-size: 0.9rem;
+}
+.resend-timer {
+  color: #999;
+  font-size: 0.9rem;
+}
+.resend-timer span {
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+
+/* هدر قهرمان */
+#heroSectionContact {
+  position: relative;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 40px;
+}
+
+#heroSectionContact img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+#heroSectionContact .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 115, 33, 0.15),
+    rgba(249, 115, 33, 0.05)
+  );
+}
+
+#contactTitle {
+  position: relative;
+  z-index: 2;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #1a1a2e;
+  text-shadow: 0 2px 20px rgba(255, 255, 255, 0.5);
+}
+
+#contactTitle span {
+  color: var(--main-color);
+}
+
+/* کارت اطلاعات تماس */
+.contact-info-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+  height: 100%;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.contact-info-card:hover {
+  box-shadow: 0 12px 50px rgba(249, 115, 33, 0.1);
+  border-color: var(--main-color);
+}
+
+.contact-info-card .about-badge {
+  display: inline-block;
+  background: var(--main-color-light);
+  color: var(--main-color);
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contact-info-card h2 {
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+}
+
+.contact-info-card .about-text {
+  color: #555;
+  line-height: 1.9;
+  font-size: 0.95rem;
+}
+
+.contact-info-card .about-text strong {
+  color: #1a1a2e;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.contact-detail-item:last-child {
+  border-bottom: none;
+}
+
+.contact-detail-item .icon-wrapper {
+  min-width: 40px;
+  height: 40px;
+  background: var(--main-color-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+  flex-shrink: 0;
+}
+
+.contact-detail-item .icon-wrapper svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--main-color);
+  stroke-width: 2;
+}
+
+.contact-detail-item .info-content {
+  flex: 1;
+}
+
+.contact-detail-item .info-content .label {
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-detail-item .info-content .value {
+  font-weight: 700;
+  color: #1a1a2e;
+  font-size: 1rem;
+}
+
+.contact-detail-item .info-content .value a {
+  color: #1a1a2e;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-detail-item .info-content .value a:hover {
+  color: var(--main-color);
+}
+
+/* فرم ارتباطی */
+.contact-form-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+  height: 100%;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.contact-form-card:hover {
+  box-shadow: 0 12px 50px rgba(249, 115, 33, 0.1);
+  border-color: var(--main-color);
+}
+
+.contact-form-card .form-title {
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.contact-form-card .form-subtitle {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.form-group-custom {
+  margin-bottom: 18px;
+}
+
+.form-group-custom label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-group-custom label .required {
+  color: var(--main-color);
+  margin-right: 2px;
+}
+
+.form-control-custom {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  color: #1a1a2e;
+}
+
+.form-control-custom:focus {
+  border-color: var(--main-color);
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(249, 115, 33, 0.1);
+}
+
+.form-control-custom::placeholder {
+  color: #bbb;
+}
+
+textarea.form-control-custom {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit {
+  background: var(--main-color);
+  border: none;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-submit:hover {
+  background: var(--main-color-dark);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(249, 115, 33, 0.3);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+.btn-submit svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+/* نقشه */
+.map-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  margin-top: 40px;
+}
+
+.map-wrapper:hover {
+  box-shadow: 0 12px 50px rgba(249, 115, 33, 0.1);
+  border-color: var(--main-color);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 380px;
+  border: none;
+  display: block;
+}
+
+.map-title {
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.map-subtitle {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* واکنش‌گرایی */
+@media (max-width: 991px) {
+  #contactTitle {
+    font-size: 2rem;
+  }
+
+  #heroSectionContact {
+    min-height: 200px;
+  }
+
+  .contact-info-card,
+  .contact-form-card {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  #contactTitle {
+    font-size: 1.5rem;
+  }
+
+  #heroSectionContact {
+    min-height: 150px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .contact-info-card,
+  .contact-form-card {
+    padding: 20px 16px;
+  }
+
+  .map-wrapper iframe {
+    height: 250px;
+  }
+}
 @media (max-width: 1400px) {
   #cartSection {
     padding: 20px 10px !important;
@@ -1050,8 +1641,6 @@ img {
   #cartPortfolio li {
     width: 400px !important;
   }
-
- 
 
   header.fixed {
     position: relative;
@@ -1314,7 +1903,6 @@ img {
     height: auto;
   }
 
- 
   .mainTitle h2 {
     font-size: 22px !important;
   }
@@ -1434,7 +2022,7 @@ img {
     width: 80px;
     height: 40px;
   }
- 
+
   #headerSvg {
     display: flex !important;
     justify-content: center !important;

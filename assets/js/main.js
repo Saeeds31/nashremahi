@@ -86,12 +86,12 @@
 
         cartItems.innerHTML += `
           <div class="cart-item">
-            <img style="height: 100px;" src="${item.image}" alt="${item.title}">
+            <img class="cartItemImage" src="${item.image}" alt="${item.title}">
             <div class="item-ditaile">
               <h4 class="font500 item-title">${item.title}</h4>
-              <div style="height: 100px;" class="d-flex justify-content-center align-items-center">
-                <div class="price_item" style="color:#e3e1e1;display:flex;">
-                  x1 <p style="color:black;">${item.price}</p>
+              <div  class="cartItemMainDiv d-flex justify-content-center align-items-center">
+                <div class="price_item priceCartItem" >
+                  x1 <p class="d-block">${item.price}</p>
                 </div>
                 <span class="remove" onclick="removeItem(${index})">✕</span>
               </div>
@@ -175,7 +175,7 @@
     new bootstrap.Carousel(heroCarousel, {
       interval: 3000,
       wrap: true,
-      
+
       ride: "carousel",
     });
     console.log("✅ Bootstrap Carousel فعال شد");
