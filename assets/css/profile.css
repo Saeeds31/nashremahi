@@ -1,0 +1,352 @@
+:root {
+  --main-color: #f97321;
+  --main-color-dark: #e0651a;
+  --main-color-light: #fef0e8;
+  --main-bg: #f8f9fa;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --card-radius: 16px;
+  --sidebar-width: 280px;
+}
+
+/* ===== صفحه اصلی ===== */
+.profile-main {
+  padding: 24px 0 60px;
+}
+
+/* ===== عنوان صفحه ===== */
+.profile-page-title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.profile-page-title h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  position: relative;
+  display: inline-block;
+}
+
+.profile-page-title h1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 60px;
+  height: 3px;
+  background: var(--main-color);
+  border-radius: 2px;
+}
+
+/* ===== سایدبار ===== */
+.profile-sidebar {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 28px 20px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #f0f0f0;
+  position: sticky;
+  top: 20px;
+}
+
+/* آواتار */
+.profile-avatar {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  box-shadow: 0 4px 15px rgba(249, 115, 33, 0.25);
+}
+
+.avatar-initials {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.avatar-name {
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+  font-size: 1.05rem;
+}
+
+.avatar-email {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* منوی سایدبار */
+.profile-menu {
+  margin-top: 16px;
+}
+
+.profile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-menu ul li {
+  margin-bottom: 4px;
+}
+
+.profile-menu ul li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: #666;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.profile-menu ul li a svg {
+  flex-shrink: 0;
+  color: #999;
+  transition: color 0.3s;
+}
+
+.profile-menu ul li a:hover {
+  background: var(--main-color-light);
+  color: var(--main-color);
+}
+
+.profile-menu ul li a:hover svg {
+  color: var(--main-color);
+}
+
+.profile-menu ul li.active a {
+  background: var(--main-color);
+  color: #fff;
+}
+
+.profile-menu ul li.active a svg {
+  color: #fff;
+}
+
+.profile-menu ul li.logout {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.profile-menu ul li.logout a:hover {
+  background: #fde8e8;
+  color: #e74c3c;
+}
+
+.profile-menu ul li.logout a:hover svg {
+  color: #e74c3c;
+}
+
+/* ===== محتوای اصلی ===== */
+.profile-content {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 32px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #f0f0f0;
+}
+
+.profile-header {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.profile-header h2 {
+  font-weight: 800;
+  color: #1a1a2e;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.profile-header p {
+  color: #999;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ===== فرم ===== */
+.profile-form .form-group {
+  margin-bottom: 16px;
+}
+
+.profile-form .form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.profile-form .form-group .required {
+  color: #e74c3c;
+}
+
+.profile-form .form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  color: #1a1a2e;
+}
+
+.profile-form .form-control:focus {
+  border-color: var(--main-color);
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(249, 115, 33, 0.08);
+}
+
+.profile-form .form-control::placeholder {
+  color: #bbb;
+}
+
+.profile-form textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ===== دکمه‌ها ===== */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+  flex-wrap: wrap;
+}
+
+.btn-save-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 32px;
+  background: var(--main-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-save-profile:hover {
+  background: var(--main-color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 115, 33, 0.3);
+}
+
+.btn-save-profile svg {
+  flex-shrink: 0;
+}
+
+.btn-reset-profile {
+  padding: 12px 32px;
+  background: transparent;
+  color: #666;
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-reset-profile:hover {
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+/* ===== واکنش‌گرایی ===== */
+@media (max-width: 991px) {
+  .profile-sidebar {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .profile-content {
+    padding: 24px;
+  }
+
+  .profile-page-title h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-main {
+    padding: 16px 0 40px;
+  }
+
+  .profile-content {
+    padding: 16px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-save-profile,
+  .btn-reset-profile {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .profile-page-title h1 {
+    font-size: 1.3rem;
+  }
+
+  .profile-menu ul li a {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .avatar-circle {
+    width: 64px;
+    height: 64px;
+  }
+
+  .avatar-initials {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-content {
+    padding: 12px;
+  }
+
+  .profile-sidebar {
+    padding: 16px;
+  }
+
+  .profile-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .profile-form .form-control {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+}

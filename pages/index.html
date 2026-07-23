@@ -45,7 +45,7 @@
         id="header"
         class="position-relative d-flex justify-content-between align-items-center container-fluid py-2 px-0"
       >
-        <a href="/pages/index.html">
+        <a href="index.html">
           <img
             id="logo-img"
             src="../assets/images/MAHI--e1662605437200.png"
@@ -59,7 +59,7 @@
             <li>
               <a
                 class="font700 text-decoration-none mainText fs-6 px-4 pb-2 MenuItemLink"
-                href="../pages/index.html"
+                href="index.html"
                 >خانه</a
               >
             </li>
@@ -67,7 +67,7 @@
               <a
                 id="books"
                 class="nav-link-custom fs-6 font700 position-relative text-decoration-none text-secondary"
-                href="/pages/books/index.html"
+                href="books.html"
               >
                 کتاب ها
                 <svg
@@ -186,7 +186,7 @@
             <li>
               <a
                 class="font700 nav-link-custom text-decoration-none text-secondary fs-6"
-                href="../pages/cart/index.html"
+                href="books.html"
                 >مجموعه ها</a
               >
             </li>
@@ -230,14 +230,14 @@
             <li>
               <a
                 class="font700 nav-link-custom text-decoration-none text-secondary fs-6"
-                href="/pages/about-us/index.html"
+                href="contact-us.html"
                 >در باره ما</a
               >
             </li>
             <li>
               <a
                 class="font700 nav-link-custom text-decoration-none text-secondary fs-6"
-                href="/pages/contact-us/index.html"
+                href="contact-us.html"
                 >تماس با ما</a
               >
             </li>
@@ -271,7 +271,7 @@
             ></path>
           </svg>
           <div class="gap-4 d-flex">
-            <a href="/pages/login/index.html">
+            <a href="login.html">
               <svg
                 class="hoverSvg"
                 xmlns="http://www.w3.org/2000/svg"
@@ -284,7 +284,7 @@
                   d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
                 /></svg
             ></a>
-            <a href="/pages/cart/index.html">
+            <a id="cartSvgIcon">
               <svg
                 class="hoverSvg"
                 xmlns="http://www.w3.org/2000/svg"
@@ -447,7 +447,11 @@
                   <strong> عزت الله فولادوند</strong>
                 </div>
               </div>
-              <span class="price">340000 تومان</span>
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn font900 mainBg d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -500,7 +504,12 @@
                   <strong> قاسم مٍِؤمنی</strong>
                 </div>
               </div>
-              <span class="price">110000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >110,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -553,7 +562,10 @@
                   <strong> آبتین گلکار</strong>
                 </div>
               </div>
-              <span>اتمام چاپ </span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price">اتمام چاپ</span>
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white" href="">
@@ -606,7 +618,12 @@
                   <strong> قاسم مٍِؤمنی</strong>
                 </div>
               </div>
-              <span class="price">330000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >330,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -660,7 +677,12 @@
                   <strong> مصطفی رضایی</strong>
                 </div>
               </div>
-              <span class="price">420000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >420,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -713,7 +735,12 @@
                   <strong> محمد رضا ابولقاسمی</strong>
                 </div>
               </div>
-              <span class="price">350000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >350,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -751,13 +778,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   خیابانی دنج در قلب مسکو</a
                 >
               </div>
@@ -772,7 +793,12 @@
                   <strong> ابتین گلکار</strong>
                 </div>
               </div>
-              <span class="price">340000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -810,13 +836,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   ارمان</a
                 >
               </div>
@@ -831,7 +851,12 @@
                   <strong> قاسم مٍِؤمنی</strong>
                 </div>
               </div>
-              <span class="price">240000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >240,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -869,13 +894,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   سه اکسیر</a
                 >
               </div>
@@ -890,7 +909,12 @@
                   <strong> علی اصغر حداد</strong>
                 </div>
               </div>
-              <span class="price">110000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -928,13 +952,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   رقیب</a
                 >
               </div>
@@ -950,7 +968,12 @@
                   <strong> احمد پرهیزی</strong>
                 </div>
               </div>
-              <span class="price">285000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >280,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -988,13 +1011,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   فلسفه‌ی اعتماد به نفس</a
                 >
               </div>
@@ -1009,7 +1026,12 @@
                   <strong> عزت الله فولادوند</strong>
                 </div>
               </div>
-              <span class="price">340000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -1047,13 +1069,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   سوموی گاو</a
                 >
               </div>
@@ -1068,7 +1084,12 @@
                   <strong> علیرضا شفیعی‌نسب</strong>
                 </div>
               </div>
-              <span class="price">340000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -1106,13 +1127,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   بازگشت فرزند و بِکُن-لبرویِر</a
                 >
               </div>
@@ -1128,7 +1143,12 @@
                   <strong> قاسم مٍِؤمنی</strong>
                 </div>
               </div>
-              <span class="price">340000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -1166,13 +1186,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   درباره‌ی پیچیدگی</a
                 >
               </div>
@@ -1187,7 +1201,12 @@
                   <strong> محمدابراهیم محجوب</strong>
                 </div>
               </div>
-              <span class="price">340000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -1206,13 +1225,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   پزشک دهکده</a
                 >
               </div>
@@ -1227,7 +1240,12 @@
                   <strong> علی‌اصغر حداد</strong>
                 </div>
               </div>
-              <span class="price">340000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -1236,35 +1254,6 @@
               >
             </li>
           </ul>
-        </div>
-        <div class="cart-sidebar"></div>
-        <div id="cartSidebar" class="cart-sidebar">
-          <div class="cart-header">
-            <h3 class="font700 fs-4">سبد خرید</h3>
-
-            <span class="font300" id="closeCart">✖</span>
-          </div>
-
-          <div id="cartItems"></div>
-
-          <div class="cart-footer price">
-            <h4
-              class="font700 d-flex justify-content-center align-items-center totalTitle"
-            >
-              قیمت کل:
-              <span id="totalPrice">0 تومان</span>
-            </h4>
-          </div>
-          <div class="d-flex justify-content-between p-4 gap-1">
-            <button class="rounded-2 SeeCartPage">
-              <a
-                class="text-decoration-none text-white"
-                href="/pages/cart/index.html"
-                >مشاهده سبد خرید</a
-              >
-            </button>
-            <button class="rounded-2 SeeOrderPage">تسویه حساب</button>
-          </div>
         </div>
       </section>
       <section>
@@ -1284,13 +1273,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   پزشک دهکده</a
                 >
               </div>
@@ -1347,13 +1330,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   پزشک دهکده</a
                 >
               </div>
@@ -1410,13 +1387,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   پزشک دهکده</a
                 >
               </div>
@@ -1473,13 +1444,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   پزشک دهکده</a
                 >
               </div>
@@ -1536,13 +1501,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   پزشک دهکده</a
                 >
               </div>
@@ -1624,7 +1583,12 @@
                     <strong> عزت الله فولادوند</strong>
                   </div>
                 </div>
-                <span class="price">340000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -1683,7 +1647,12 @@
                     <strong> قاسم مٍِؤمنی</strong>
                   </div>
                 </div>
-                <span class="price">110000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -1742,7 +1711,10 @@
                     <strong> آبتین گلکار</strong>
                   </div>
                 </div>
-                <span>اتمام چاپ </span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price">اتمام چاپ</span>
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white" href="">
@@ -1801,7 +1773,12 @@
                     <strong> قاسم مٍِؤمنی</strong>
                   </div>
                 </div>
-                <span class="price">330000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -1861,7 +1838,12 @@
                     <strong> مصطفی رضایی</strong>
                   </div>
                 </div>
-                <span class="price">420000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -1919,7 +1901,12 @@
                     <strong> عزت الله فولادوند</strong>
                   </div>
                 </div>
-                <span class="price">340000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -1978,7 +1965,12 @@
                     <strong> قاسم مٍِؤمنی</strong>
                   </div>
                 </div>
-                <span class="price">110000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -2037,7 +2029,10 @@
                     <strong> آبتین گلکار</strong>
                   </div>
                 </div>
-                <span>اتمام چاپ </span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price">اتمام چاپ</span>
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white" href="">
@@ -2096,7 +2091,12 @@
                     <strong> قاسم مٍِؤمنی</strong>
                   </div>
                 </div>
-                <span class="price">330000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -2153,7 +2153,12 @@
                     <strong> مصطفی رضایی</strong>
                   </div>
                 </div>
-                <span class="price">420000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -2217,7 +2222,12 @@
                     <strong> عزت الله فولادوند</strong>
                   </div>
                 </div>
-                <span class="price">340000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -2276,7 +2286,12 @@
                     <strong> قاسم مٍِؤمنی</strong>
                   </div>
                 </div>
-                <span class="price">110000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -2335,7 +2350,10 @@
                     <strong> آبتین گلکار</strong>
                   </div>
                 </div>
-                <span>اتمام چاپ </span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price">اتمام چاپ</span>
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white" href="">
@@ -2394,7 +2412,12 @@
                     <strong> قاسم مٍِؤمنی</strong>
                   </div>
                 </div>
-                <span class="price">330000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -2454,7 +2477,12 @@
                     <strong> مصطفی رضایی</strong>
                   </div>
                 </div>
-                <span class="price">420000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -2512,7 +2540,12 @@
                     <strong> عزت الله فولادوند</strong>
                   </div>
                 </div>
-                <span class="price">340000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -2571,7 +2604,12 @@
                     <strong> قاسم مٍِؤمنی</strong>
                   </div>
                 </div>
-                <span class="price">110000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -2630,7 +2668,10 @@
                     <strong> آبتین گلکار</strong>
                   </div>
                 </div>
-                <span>اتمام چاپ </span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price">اتمام چاپ</span>
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white" href="">
@@ -2689,7 +2730,12 @@
                     <strong> قاسم مٍِؤمنی</strong>
                   </div>
                 </div>
-                <span class="price">330000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -2746,7 +2792,12 @@
                     <strong> مصطفی رضایی</strong>
                   </div>
                 </div>
-                <span class="price">420000 تومان</span>
+
+                <p class="d-flex flex-column align-items-end discountBox">
+                  <span class="fw-bold mainText" class="price"
+                    >340,000 تومان</span
+                  >
+                </p>
                 <span
                   class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                   ><a class="text-decoration-none text-white add-cart" href=""
@@ -2803,7 +2854,12 @@
                   <strong> عزت الله فولادوند</strong>
                 </div>
               </div>
-              <span class="price">340000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -2841,13 +2897,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   بشنو از باران</a
                 >
               </div>
@@ -2862,7 +2912,12 @@
                   <strong> قاسم مٍِؤمنی</strong>
                 </div>
               </div>
-              <span class="price">110000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -2900,13 +2955,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   غوطه در اب</a
                 >
               </div>
@@ -2921,7 +2970,10 @@
                   <strong> آبتین گلکار</strong>
                 </div>
               </div>
-              <span>اتمام چاپ </span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price">اتمام چاپ</span>
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white" href="">
@@ -2959,13 +3011,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   فلسفه‌ی مواجهه با دیگری
                 </a>
               </div>
@@ -2980,7 +3026,12 @@
                   <strong> قاسم مٍِؤمنی</strong>
                 </div>
               </div>
-              <span class="price">330000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -3018,13 +3069,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   فساد</a
                 >
               </div>
@@ -3040,7 +3085,12 @@
                   <strong> مصطفی رضایی</strong>
                 </div>
               </div>
-              <span class="price">420000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -3078,13 +3128,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   کارل مارکس و سنت اندیشهٔ سیاسی در غرب</a
                 >
               </div>
@@ -3098,7 +3142,12 @@
                   <strong> عزت الله فولادوند</strong>
                 </div>
               </div>
-              <span class="price">340000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -3136,13 +3185,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   بشنو از باران</a
                 >
               </div>
@@ -3157,7 +3200,12 @@
                   <strong> قاسم مٍِؤمنی</strong>
                 </div>
               </div>
-              <span class="price">110000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -3195,13 +3243,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   غوطه در اب</a
                 >
               </div>
@@ -3216,7 +3258,10 @@
                   <strong> آبتین گلکار</strong>
                 </div>
               </div>
-              <span>اتمام چاپ </span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price">اتمام چاپ</span>
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white" href="">
@@ -3254,13 +3299,7 @@
                 />
               </a>
               <div>
-                <a
-                  class="text-decoration-none productTitle mainText"
-                  mainText
-                  text-decoration-none
-                  productTitle
-                  href=""
-                >
+                <a class="text-decoration-none productTitle mainText" href="">
                   فلسفه‌ی مواجهه با دیگری
                 </a>
               </div>
@@ -3275,7 +3314,12 @@
                   <strong> قاسم مٍِؤمنی</strong>
                 </div>
               </div>
-              <span class="price">330000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -3332,7 +3376,12 @@
                   <strong> مصطفی رضایی</strong>
                 </div>
               </div>
-              <span class="price">420000 تومان</span>
+
+              <p class="d-flex flex-column align-items-end discountBox">
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
               <span
                 class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
                 ><a class="text-decoration-none text-white add-cart" href=""
@@ -3483,6 +3532,30 @@
         </ul>
       </section>
     </main>
+   <aside>
+  <div class="cart-sidebar"></div>
+  <div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3 class="font700 fs-4">سبد خرید</h3>
+      <span class="font300" id="closeCart">✖</span>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-footer price">
+      <h4 class="font700 d-flex justify-content-center align-items-center totalTitle">
+        قیمت کل:
+        <span id="totalPrice">0 تومان</span>
+      </h4>
+    </div>
+    <div class="d-flex justify-content-between p-4 gap-1">
+      <button class="rounded-2 SeeCartPage">
+        <a class="text-decoration-none text-white" href="cart.html">مشاهده سبد خرید</a>
+      </button>
+      <button class="rounded-2 SeeOrderPage">تسویه حساب</button>
+    </div>
+  </div>
+</aside>
     <footer class="footer">
       <div class="footer-info">
         <img
@@ -3577,7 +3650,7 @@
         <img src="../assets/images/ENAMADpng.parspng.com_.png" alt="" />
       </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
     <script src="../assets/js/bootstrap.min.js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
   </body>

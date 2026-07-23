@@ -40,6 +40,7 @@
   if (closeBtn) {
     closeBtn.addEventListener("click", closeMenu);
   }
+
   // ===== 3. سبد خرید (Cart) =====
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -64,9 +65,17 @@
           author: card.querySelectorAll("strong")[0]?.innerText || "",
           translator: card.querySelectorAll("strong")[1]?.innerText || "",
           price: card.querySelector(".price")?.innerText || "0",
+          quantity: 1, // اضافه کردن تعداد
         };
 
-        cart.push(product);
+        // بررسی کنید که آیا محصول قبلاً در سبد وجود دارد
+        const existingItem = cart.find((item) => item.title === product.title);
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cart.push(product);
+        }
+
         localStorage.setItem("cart", JSON.stringify(cart));
         showCart();
         sidebar.classList.add("active");
@@ -82,16 +91,22 @@
 
       cart.forEach((item, index) => {
         const priceNum = parseInt(item.price.replace(/\D/g, "")) || 0;
-        total += priceNum;
+        const itemTotal = priceNum * (item.quantity || 1);
+        total += itemTotal;
 
         cartItems.innerHTML += `
           <div class="cart-item">
             <img class="cartItemImage" src="${item.image}" alt="${item.title}">
             <div class="item-ditaile">
               <h4 class="font500 item-title">${item.title}</h4>
-              <div  class="cartItemMainDiv d-flex justify-content-center align-items-center">
-                <div class="price_item priceCartItem" >
-                  x1 <p class="d-block">${item.price}</p>
+              <div class="cartItemMainDiv d-flex justify-content-center align-items-center">
+                <div class="qty-controls">
+                  <button class="qty-btn qty-minus" data-index="${index}">−</button>
+                  <span class="qty-number">${item.quantity || 1}</span>
+                  <button class="qty-btn qty-plus" data-index="${index}">+</button>
+                </div>
+                <div class="price_item priceCartItem">
+                  <p class="d-block">${itemTotal.toLocaleString()} تومان</p>
                 </div>
                 <span class="remove" onclick="removeItem(${index})">✕</span>
               </div>
@@ -100,7 +115,48 @@
         `;
       });
 
+      // اضافه کردن رویدادهای دکمه‌های + و -
+      document.querySelectorAll(".qty-minus").forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          const index = parseInt(this.dataset.index);
+          changeQuantity(index, -1);
+        });
+      });
+
+      document.querySelectorAll(".qty-plus").forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          const index = parseInt(this.dataset.index);
+          changeQuantity(index, 1);
+        });
+      });
+
       totalPrice.innerHTML = total.toLocaleString() + " تومان";
+    }
+
+    // ===== تغییر تعداد =====
+    function changeQuantity(index, delta) {
+      if (index < 0 || index >= cart.length) return;
+
+      const newQuantity = (cart[index].quantity || 1) + delta;
+
+      if (newQuantity < 1) {
+        // اگر تعداد به صفر رسید، آیتم را حذف کن
+        cart.splice(index, 1);
+      } else {
+        cart[index].quantity = newQuantity;
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      showCart();
+
+      // اگر سبد خالی شد، ببند
+      if (cart.length === 0) {
+        setTimeout(() => {
+          sidebar.classList.remove("active");
+        }, 500);
+      }
     }
 
     // حذف آیتم از سبد خرید
@@ -108,6 +164,12 @@
       cart.splice(index, 1);
       localStorage.setItem("cart", JSON.stringify(cart));
       showCart();
+
+      if (cart.length === 0) {
+        setTimeout(() => {
+          sidebar.classList.remove("active");
+        }, 500);
+      }
     };
 
     // بستن سبد خرید
@@ -175,11 +237,20 @@
     new bootstrap.Carousel(heroCarousel, {
       interval: 3000,
       wrap: true,
-
       ride: "carousel",
     });
     console.log("✅ Bootstrap Carousel فعال شد");
   } else {
     console.warn("⚠️ Carousel در این صفحه وجود ندارد یا Bootstrap لود نشده");
+  }
+
+  // ===== 6. باز کردن سبد خرید با آیکون cartSvgIcon =====
+  const cartSvgIcon = document.getElementById("cartSvgIcon");
+  if (cartSvgIcon && sidebar) {
+    cartSvgIcon.addEventListener("click", function (e) {
+      e.preventDefault();
+      sidebar.classList.add("active");
+    });
+    console.log("✅ آیکون سبد خرید (cartSvgIcon) فعال شد");
   }
 })(); // پایان IIFE

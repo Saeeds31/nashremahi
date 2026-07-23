@@ -269,14 +269,16 @@
   border-color: #f97321;
   outline: none;
 }
-
+main {
+  padding: 0 10%;
+}
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 24px;
   list-style: none;
-  padding: 0 16px;
   margin: 0 0 24px 0;
+  padding: 0;
 }
 
 .pagination {
@@ -355,6 +357,9 @@
   font-weight: 700;
 }
 @media (max-width: 768px) {
+  main {
+    padding: 0 2%;
+  }
   .filter-section {
     padding: 16px;
     margin: 0 8px 24px 8px;
@@ -413,7 +418,7 @@
     gap: 16px;
     padding: 0 8px;
   }
-  .search-icon{
+  .search-icon {
     display: none;
   }
 }
@@ -436,5 +441,4 @@
     width: 80px;
     font-size: 0.75rem;
   }
-  
 }

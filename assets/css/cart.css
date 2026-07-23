@@ -269,9 +269,8 @@
   margin-top: 16px;
   background: #fff;
   border-radius: var(--card-radius);
-  padding: 16px 20px;
-  box-shadow: var(--card-shadow);
-  border: 1px solid #f0f0f0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .coupon-box {
@@ -1053,7 +1052,6 @@
   .cart-actions-wrapper {
     flex-direction: column;
     align-items: stretch;
-    padding: 14px 16px;
   }
 
   .coupon-box {

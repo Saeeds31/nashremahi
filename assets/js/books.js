@@ -229,48 +229,63 @@
         : "اتمام چاپ";
       const isOutOfStock = !book.inStock;
 
-      html += `
-                <li class="product-cart position-relative d-flex flex-column gap-3 rounded-3">
-                    <a href="#">
-                        <img class="bookImage" src="${book.image}" alt="${book.title}" onerror="this.src='../../assets/images/sonat_co1-300x450.jpg'">
-                    </a>
-                    <div>
-                        <a class="text-decoration-none mainText productTitle" href="#">${book.title}</a>
-                    </div>
-                    <div>
-                        <div>
-                            <span class="font300 translaterText">نویسنده:</span>
-                            <strong>${book.author}</strong>
-                        </div>
-                        ${
-                          book.translator
-                            ? `
-                        <div>
-                            <span class="font300 translaterText">مترجم:</span>
-                            <strong>${book.translator}</strong>
-                        </div>
-                        `
-                            : ""
-                        }
-                    </div>
-                    ${
-                      isOutOfStock
-                        ? `<span>اتمام چاپ</span>`
-                        : `<span class="price">${priceDisplay}</span>`
-                    }
-                    <span class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center">
-                        ${
-                          isOutOfStock
-                            ? `<a class="text-decoration-none text-white" href="#">اطلاعات بیشتر</a>`
-                            : `<a class="text-decoration-none text-white add-cart" href="#">افزودن به سبد خرید</a>`
-                        }
-                    </span>
-                    <div class="heartSvg bg-white px-2 py-2 d-none justify-content-center align-items-center" data-id="${book.id}">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="22" height="22" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"/>
-                        </svg>
-                    </div>
-                </li>
+      html += `   <li
+              class="product-cart hasDiscount position-relative d-flex flex-column gap-3 rounded-3"
+            >
+              <a href="">
+                <img
+                  class="bookImage"
+                  src="${book.image}"
+                  alt=""
+                />
+              </a>
+              <div>
+                <a class="text-decoration-none productTitle mainText" href="">
+                  پزشک دهکده</a
+                >
+              </div>
+              <div>
+                <div>
+                  <span class="bookTitle">نویسنده:</span>
+                  <strong> فرانتس کافکا</strong>
+                </div>
+                <div>
+                  <span class="font300 translaterText">مترجم:</span>
+                  <strong> علی‌اصغر حداد</strong>
+                </div>
+              </div>
+              <p class="d-flex flex-column align-items-end discountBox">
+                <del class="text-secondary">420,000 تومان</del>
+                <span class="fw-bold mainText" class="price"
+                  >340,000 تومان</span
+                >
+              </p>
+              <span
+                class="addToCartBtn d-none shopping rounded-3 d-flex justify-content-center align-items-center"
+                ><a class="text-decoration-none text-white add-cart" href=""
+                  >افزودن به سبد خرید</a
+                ></span
+              >
+              <div
+                class="heartSvg bg-white px-2 py-2 d-none justify-content-center align-items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="22"
+                  height="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                  />
+                </svg>
+              </div>
+            </li>
             `;
     });
 
