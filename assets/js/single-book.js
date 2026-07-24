@@ -191,6 +191,37 @@
       showImageInModal(src);
     }
 
+    // ===== فعال‌سازی thumbnail ها هنگام تغییر اسلاید =====
+    function updateActiveThumbnail() {
+      const carouselElement = document.getElementById("bookCarousel");
+      if (!carouselElement) return;
+
+      const activeIndex = document.querySelector(
+        ".carousel-inner .carousel-item.active",
+      );
+      if (!activeIndex) return;
+
+      // پیدا کردن index اسلاید فعال
+      const allItems = document.querySelectorAll(
+        ".carousel-inner .carousel-item",
+      );
+      let currentIndex = 0;
+      allItems.forEach(function (item, index) {
+        if (item.classList.contains("active")) {
+          currentIndex = index;
+        }
+      });
+
+      // به‌روزرسانی کلاس active در thumbnail ها
+      const thumbnails = document.querySelectorAll(".carousel-thumbnails img");
+      thumbnails.forEach(function (thumb, index) {
+        thumb.classList.remove("active");
+        if (index === currentIndex) {
+          thumb.classList.add("active");
+        }
+      });
+    }
+
     // ===== مشاهده تغییرات در DOM (برای تصاویر داینامیک) =====
     let observer = null;
 
@@ -225,12 +256,23 @@
       attachToCarouselImages();
       startObserving();
 
+      // اتصال به تصاویر کوچک (thumbnail)
+      const thumbnails = document.querySelectorAll(".carousel-thumbnails img");
+      thumbnails.forEach(function (thumb) {
+        thumb.removeEventListener("click", thumbnailClickHandler);
+        thumb.addEventListener("click", thumbnailClickHandler);
+      });
+
       // همچنین روی تغییر اسلاید کاروسل، تصاویر رو دوباره متصل کنیم
       const carouselElement = document.getElementById("bookCarousel");
       if (carouselElement) {
         carouselElement.addEventListener("slid.bs.carousel", function () {
           attachToCarouselImages();
+          updateActiveThumbnail(); // ← این خط اضافه شده
         });
+
+        // یک بار هم در ابتدا اجرا کن
+        setTimeout(updateActiveThumbnail, 100);
       }
     }
 

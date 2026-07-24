@@ -1633,7 +1633,6 @@ textarea.form-control-custom {
   transition: all var(--transition-speed) ease;
   text-align: center;
   cursor: pointer;
-  margin-top: 6px;
   width: 100%;
   min-height: 36px;
   display: flex !important;
@@ -1661,8 +1660,8 @@ textarea.form-control-custom {
 /* ===== دکمه قلب (همیشه نمایش داده می‌شود) ===== */
 .heartSvg {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 16px;
+  left: 16px;
   background: rgba(255, 255, 255, 0.92) !important;
   border-radius: 50%;
   width: 32px;
@@ -1840,8 +1839,8 @@ textarea.form-control-custom {
   .heartSvg {
     width: 28px;
     height: 28px;
-    top: 8px;
-    left: 8px;
+    top: 12px;
+    left: 12px;
   }
 
   .heartSvg svg {
@@ -1904,8 +1903,8 @@ textarea.form-control-custom {
   .heartSvg {
     width: 24px;
     height: 24px;
-    top: 6px;
-    left: 6px;
+    top: 12px;
+    left: 12px;
   }
 
   .heartSvg svg {
@@ -2042,6 +2041,9 @@ textarea.form-control-custom {
 
 .product-cart.out-of-stock .addToCartBtn:hover {
   background: #777;
+}
+.heartSvg.actived svg {
+  fill: red;
 }
 @media (max-width: 1400px) {
   #cartSection {
@@ -2361,8 +2363,8 @@ textarea.form-control-custom {
   }
 
   header {
-    padding: 0px 36px !important;
-
+    padding: 10px !important;
+    padding-right: 40px !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
