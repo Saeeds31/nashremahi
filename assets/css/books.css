@@ -280,7 +280,9 @@ main {
   margin: 0 0 24px 0;
   padding: 0;
 }
-
+#productsContainer {
+  width: 100%;
+}
 .pagination {
   display: flex;
   justify-content: center;

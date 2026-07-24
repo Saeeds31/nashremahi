@@ -16,7 +16,7 @@
   padding: 24px 0 60px;
 }
 #imageModal {
-  display: flex;
+  display: none;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -29,7 +29,7 @@
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.3s;
 }
 #modalCloseBtn {
@@ -483,14 +483,6 @@
   border-radius: 2px;
 }
 
-.suggested-products-grid {
-  display: grid !important;
-  gap: 24px !important;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 /* ===== دیدگاه‌ها ===== */
 .comments-section {
   margin-top: 40px;
@@ -773,10 +765,6 @@
 
   .price-box .price-value {
     font-size: 1.2rem;
-  }
-
-  .suggested-products-grid {
-    gap: 16px !important;
   }
 
   .comment-form-wrapper {

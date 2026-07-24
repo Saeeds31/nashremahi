@@ -1022,11 +1022,6 @@
     font-size: 1.5rem;
   }
 
-  .cart-item {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 16px 0;
-  }
 
   .cart-item img {
     width: 80px;

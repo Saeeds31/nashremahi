@@ -398,42 +398,802 @@
 
         <!-- لیست کتاب‌ها -->
         <ul class="products" id="productsContainer">
-          <!-- کتاب‌ها با جاوااسکریپت رندر می‌شوند -->
+          <li
+            class="product-cart position-relative d-flex flex-column gap-2 rounded-3"
+          >
+            <!-- تصویر -->
+            <a href="#" class="product-image-link">
+              <img
+                class="bookImage"
+                src="../assets/images/sonat_co1-300x450.jpg"
+                alt="کارل مارکس و سنت اندیشهٔ سیاسی در غرب"
+              />
+            </a>
+
+            <!-- عنوان -->
+            <div class="product-title-wrapper">
+              <a class="text-decoration-none productTitle mainText" href="#">
+                کارل مارکس و سنت اندیشهٔ سیاسی در غرب
+              </a>
+            </div>
+
+            <!-- نویسنده و مترجم -->
+            <div class="product-meta">
+              <div>
+                <span class="font300 translaterText">نویسنده:</span>
+                <strong>هانا ارنت</strong>
+              </div>
+              <div>
+                <span class="font300 translaterText">مترجم:</span>
+                <strong>عزت الله فولادوند</strong>
+              </div>
+            </div>
+
+            <!-- قیمت -->
+            <div class="product-price-wrapper">
+              <div class="price-box">
+                <span class="price">۳۴۰,۰۰۰ تومان</span>
+              </div>
+            </div>
+
+            <!-- دکمه افزودن به سبد خرید (همیشه نمایش داده می‌شود) -->
+            <span
+              class="addToCartBtn shopping rounded-3 d-flex justify-content-center align-items-center"
+            >
+              <a class="text-decoration-none text-white add-cart" href="#"
+                >افزودن به سبد خرید</a
+              >
+            </span>
+
+            <!-- دکمه قلب (همیشه نمایش داده می‌شود) -->
+            <div
+              class="heartSvg bg-white px-2 py-2 d-flex justify-content-center align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="32"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                />
+              </svg>
+            </div>
+          </li>
+          <li
+            class="product-cart position-relative d-flex flex-column gap-2 rounded-3 has-discount"
+          >
+            <!-- برچسب تخفیف -->
+            <span class="discount-badge">٪۲۰ تخفیف</span>
+
+            <!-- تصویر -->
+            <a href="#" class="product-image-link">
+              <img
+                class="bookImage"
+                src="../assets/images/sonat_co1-300x450.jpg"
+                alt="کارل مارکس و سنت اندیشهٔ سیاسی در غرب"
+              />
+            </a>
+
+            <!-- عنوان -->
+            <div class="product-title-wrapper">
+              <a class="text-decoration-none productTitle mainText" href="#">
+                کارل مارکس و سنت اندیشهٔ سیاسی در غرب
+              </a>
+            </div>
+
+            <!-- نویسنده و مترجم -->
+            <div class="product-meta">
+              <div>
+                <span class="font300 translaterText">نویسنده:</span>
+                <strong>هانا ارنت</strong>
+              </div>
+              <div>
+                <span class="font300 translaterText">مترجم:</span>
+                <strong>عزت الله فولادوند</strong>
+              </div>
+            </div>
+
+            <!-- قیمت با تخفیف -->
+            <div class="product-price-wrapper">
+              <div class="price-box">
+                <span class="price-old">۴۲۵,۰۰۰ تومان</span>
+                <span class="price">۳۴۰,۰۰۰ تومان</span>
+              </div>
+            </div>
+
+            <!-- دکمه افزودن به سبد خرید -->
+            <span
+              class="addToCartBtn shopping rounded-3 d-flex justify-content-center align-items-center"
+            >
+              <a class="text-decoration-none text-white add-cart" href="#"
+                >افزودن به سبد خرید</a
+              >
+            </span>
+
+            <!-- دکمه قلب -->
+            <div
+              class="heartSvg bg-white px-2 py-2 d-flex justify-content-center align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="32"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                />
+              </svg>
+            </div>
+          </li>
+          <li
+            class="product-cart position-relative d-flex flex-column gap-2 rounded-3"
+          >
+            <!-- تصویر -->
+            <a href="#" class="product-image-link">
+              <img
+                class="bookImage"
+                src="../assets/images/sonat_co1-300x450.jpg"
+                alt="کارل مارکس و سنت اندیشهٔ سیاسی در غرب"
+              />
+            </a>
+
+            <!-- عنوان -->
+            <div class="product-title-wrapper">
+              <a class="text-decoration-none productTitle mainText" href="#">
+                کارل مارکس و سنت اندیشهٔ سیاسی در غرب
+              </a>
+            </div>
+
+            <!-- نویسنده و مترجم -->
+            <div class="product-meta">
+              <div>
+                <span class="font300 translaterText">نویسنده:</span>
+                <strong>هانا ارنت</strong>
+              </div>
+              <div>
+                <span class="font300 translaterText">مترجم:</span>
+                <strong>عزت الله فولادوند</strong>
+              </div>
+            </div>
+
+            <!-- قیمت -->
+            <div class="product-price-wrapper">
+              <div class="price-box">
+                <span class="price">۳۴۰,۰۰۰ تومان</span>
+              </div>
+            </div>
+
+            <!-- دکمه افزودن به سبد خرید (همیشه نمایش داده می‌شود) -->
+            <span
+              class="addToCartBtn shopping rounded-3 d-flex justify-content-center align-items-center"
+            >
+              <a class="text-decoration-none text-white add-cart" href="#"
+                >افزودن به سبد خرید</a
+              >
+            </span>
+
+            <!-- دکمه قلب (همیشه نمایش داده می‌شود) -->
+            <div
+              class="heartSvg bg-white px-2 py-2 d-flex justify-content-center align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="32"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                />
+              </svg>
+            </div>
+          </li>
+          <li
+            class="product-cart position-relative d-flex flex-column gap-2 rounded-3 has-discount"
+          >
+            <!-- برچسب تخفیف -->
+            <span class="discount-badge">٪۲۰ تخفیف</span>
+
+            <!-- تصویر -->
+            <a href="#" class="product-image-link">
+              <img
+                class="bookImage"
+                src="../assets/images/sonat_co1-300x450.jpg"
+                alt="کارل مارکس و سنت اندیشهٔ سیاسی در غرب"
+              />
+            </a>
+
+            <!-- عنوان -->
+            <div class="product-title-wrapper">
+              <a class="text-decoration-none productTitle mainText" href="#">
+                کارل مارکس و سنت اندیشهٔ سیاسی در غرب
+              </a>
+            </div>
+
+            <!-- نویسنده و مترجم -->
+            <div class="product-meta">
+              <div>
+                <span class="font300 translaterText">نویسنده:</span>
+                <strong>هانا ارنت</strong>
+              </div>
+              <div>
+                <span class="font300 translaterText">مترجم:</span>
+                <strong>عزت الله فولادوند</strong>
+              </div>
+            </div>
+
+            <!-- قیمت با تخفیف -->
+            <div class="product-price-wrapper">
+              <div class="price-box">
+                <span class="price-old">۴۲۵,۰۰۰ تومان</span>
+                <span class="price">۳۴۰,۰۰۰ تومان</span>
+              </div>
+            </div>
+
+            <!-- دکمه افزودن به سبد خرید -->
+            <span
+              class="addToCartBtn shopping rounded-3 d-flex justify-content-center align-items-center"
+            >
+              <a class="text-decoration-none text-white add-cart" href="#"
+                >افزودن به سبد خرید</a
+              >
+            </span>
+
+            <!-- دکمه قلب -->
+            <div
+              class="heartSvg bg-white px-2 py-2 d-flex justify-content-center align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="32"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                />
+              </svg>
+            </div>
+          </li>
+          <li
+            class="product-cart position-relative d-flex flex-column gap-2 rounded-3"
+          >
+            <!-- تصویر -->
+            <a href="#" class="product-image-link">
+              <img
+                class="bookImage"
+                src="../assets/images/sonat_co1-300x450.jpg"
+                alt="کارل مارکس و سنت اندیشهٔ سیاسی در غرب"
+              />
+            </a>
+
+            <!-- عنوان -->
+            <div class="product-title-wrapper">
+              <a class="text-decoration-none productTitle mainText" href="#">
+                کارل مارکس و سنت اندیشهٔ سیاسی در غرب
+              </a>
+            </div>
+
+            <!-- نویسنده و مترجم -->
+            <div class="product-meta">
+              <div>
+                <span class="font300 translaterText">نویسنده:</span>
+                <strong>هانا ارنت</strong>
+              </div>
+              <div>
+                <span class="font300 translaterText">مترجم:</span>
+                <strong>عزت الله فولادوند</strong>
+              </div>
+            </div>
+
+            <!-- قیمت -->
+            <div class="product-price-wrapper">
+              <div class="price-box">
+                <span class="price">۳۴۰,۰۰۰ تومان</span>
+              </div>
+            </div>
+
+            <!-- دکمه افزودن به سبد خرید (همیشه نمایش داده می‌شود) -->
+            <span
+              class="addToCartBtn shopping rounded-3 d-flex justify-content-center align-items-center"
+            >
+              <a class="text-decoration-none text-white add-cart" href="#"
+                >افزودن به سبد خرید</a
+              >
+            </span>
+
+            <!-- دکمه قلب (همیشه نمایش داده می‌شود) -->
+            <div
+              class="heartSvg bg-white px-2 py-2 d-flex justify-content-center align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="32"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                />
+              </svg>
+            </div>
+          </li>
+          <li
+            class="product-cart position-relative d-flex flex-column gap-2 rounded-3 has-discount"
+          >
+            <!-- برچسب تخفیف -->
+            <span class="discount-badge">٪۲۰ تخفیف</span>
+
+            <!-- تصویر -->
+            <a href="#" class="product-image-link">
+              <img
+                class="bookImage"
+                src="../assets/images/sonat_co1-300x450.jpg"
+                alt="کارل مارکس و سنت اندیشهٔ سیاسی در غرب"
+              />
+            </a>
+
+            <!-- عنوان -->
+            <div class="product-title-wrapper">
+              <a class="text-decoration-none productTitle mainText" href="#">
+                کارل مارکس و سنت اندیشهٔ سیاسی در غرب
+              </a>
+            </div>
+
+            <!-- نویسنده و مترجم -->
+            <div class="product-meta">
+              <div>
+                <span class="font300 translaterText">نویسنده:</span>
+                <strong>هانا ارنت</strong>
+              </div>
+              <div>
+                <span class="font300 translaterText">مترجم:</span>
+                <strong>عزت الله فولادوند</strong>
+              </div>
+            </div>
+
+            <!-- قیمت با تخفیف -->
+            <div class="product-price-wrapper">
+              <div class="price-box">
+                <span class="price-old">۴۲۵,۰۰۰ تومان</span>
+                <span class="price">۳۴۰,۰۰۰ تومان</span>
+              </div>
+            </div>
+
+            <!-- دکمه افزودن به سبد خرید -->
+            <span
+              class="addToCartBtn shopping rounded-3 d-flex justify-content-center align-items-center"
+            >
+              <a class="text-decoration-none text-white add-cart" href="#"
+                >افزودن به سبد خرید</a
+              >
+            </span>
+
+            <!-- دکمه قلب -->
+            <div
+              class="heartSvg bg-white px-2 py-2 d-flex justify-content-center align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="32"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                />
+              </svg>
+            </div>
+          </li>
+          <li
+            class="product-cart position-relative d-flex flex-column gap-2 rounded-3"
+          >
+            <!-- تصویر -->
+            <a href="#" class="product-image-link">
+              <img
+                class="bookImage"
+                src="../assets/images/sonat_co1-300x450.jpg"
+                alt="کارل مارکس و سنت اندیشهٔ سیاسی در غرب"
+              />
+            </a>
+
+            <!-- عنوان -->
+            <div class="product-title-wrapper">
+              <a class="text-decoration-none productTitle mainText" href="#">
+                کارل مارکس و سنت اندیشهٔ سیاسی در غرب
+              </a>
+            </div>
+
+            <!-- نویسنده و مترجم -->
+            <div class="product-meta">
+              <div>
+                <span class="font300 translaterText">نویسنده:</span>
+                <strong>هانا ارنت</strong>
+              </div>
+              <div>
+                <span class="font300 translaterText">مترجم:</span>
+                <strong>عزت الله فولادوند</strong>
+              </div>
+            </div>
+
+            <!-- قیمت -->
+            <div class="product-price-wrapper">
+              <div class="price-box">
+                <span class="price">۳۴۰,۰۰۰ تومان</span>
+              </div>
+            </div>
+
+            <!-- دکمه افزودن به سبد خرید (همیشه نمایش داده می‌شود) -->
+            <span
+              class="addToCartBtn shopping rounded-3 d-flex justify-content-center align-items-center"
+            >
+              <a class="text-decoration-none text-white add-cart" href="#"
+                >افزودن به سبد خرید</a
+              >
+            </span>
+
+            <!-- دکمه قلب (همیشه نمایش داده می‌شود) -->
+            <div
+              class="heartSvg bg-white px-2 py-2 d-flex justify-content-center align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="32"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                />
+              </svg>
+            </div>
+          </li>
+          <li
+            class="product-cart position-relative d-flex flex-column gap-2 rounded-3 has-discount"
+          >
+            <!-- برچسب تخفیف -->
+            <span class="discount-badge">٪۲۰ تخفیف</span>
+
+            <!-- تصویر -->
+            <a href="#" class="product-image-link">
+              <img
+                class="bookImage"
+                src="../assets/images/sonat_co1-300x450.jpg"
+                alt="کارل مارکس و سنت اندیشهٔ سیاسی در غرب"
+              />
+            </a>
+
+            <!-- عنوان -->
+            <div class="product-title-wrapper">
+              <a class="text-decoration-none productTitle mainText" href="#">
+                کارل مارکس و سنت اندیشهٔ سیاسی در غرب
+              </a>
+            </div>
+
+            <!-- نویسنده و مترجم -->
+            <div class="product-meta">
+              <div>
+                <span class="font300 translaterText">نویسنده:</span>
+                <strong>هانا ارنت</strong>
+              </div>
+              <div>
+                <span class="font300 translaterText">مترجم:</span>
+                <strong>عزت الله فولادوند</strong>
+              </div>
+            </div>
+
+            <!-- قیمت با تخفیف -->
+            <div class="product-price-wrapper">
+              <div class="price-box">
+                <span class="price-old">۴۲۵,۰۰۰ تومان</span>
+                <span class="price">۳۴۰,۰۰۰ تومان</span>
+              </div>
+            </div>
+
+            <!-- دکمه افزودن به سبد خرید -->
+            <span
+              class="addToCartBtn shopping rounded-3 d-flex justify-content-center align-items-center"
+            >
+              <a class="text-decoration-none text-white add-cart" href="#"
+                >افزودن به سبد خرید</a
+              >
+            </span>
+
+            <!-- دکمه قلب -->
+            <div
+              class="heartSvg bg-white px-2 py-2 d-flex justify-content-center align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="32"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                />
+              </svg>
+            </div>
+          </li>
+          <li
+            class="product-cart position-relative d-flex flex-column gap-2 rounded-3"
+          >
+            <!-- تصویر -->
+            <a href="#" class="product-image-link">
+              <img
+                class="bookImage"
+                src="../assets/images/sonat_co1-300x450.jpg"
+                alt="کارل مارکس و سنت اندیشهٔ سیاسی در غرب"
+              />
+            </a>
+
+            <!-- عنوان -->
+            <div class="product-title-wrapper">
+              <a class="text-decoration-none productTitle mainText" href="#">
+                کارل مارکس و سنت اندیشهٔ سیاسی در غرب
+              </a>
+            </div>
+
+            <!-- نویسنده و مترجم -->
+            <div class="product-meta">
+              <div>
+                <span class="font300 translaterText">نویسنده:</span>
+                <strong>هانا ارنت</strong>
+              </div>
+              <div>
+                <span class="font300 translaterText">مترجم:</span>
+                <strong>عزت الله فولادوند</strong>
+              </div>
+            </div>
+
+            <!-- قیمت -->
+            <div class="product-price-wrapper">
+              <div class="price-box">
+                <span class="price">۳۴۰,۰۰۰ تومان</span>
+              </div>
+            </div>
+
+            <!-- دکمه افزودن به سبد خرید (همیشه نمایش داده می‌شود) -->
+            <span
+              class="addToCartBtn shopping rounded-3 d-flex justify-content-center align-items-center"
+            >
+              <a class="text-decoration-none text-white add-cart" href="#"
+                >افزودن به سبد خرید</a
+              >
+            </span>
+
+            <!-- دکمه قلب (همیشه نمایش داده می‌شود) -->
+            <div
+              class="heartSvg bg-white px-2 py-2 d-flex justify-content-center align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="32"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                />
+              </svg>
+            </div>
+          </li>
+          <li
+            class="product-cart position-relative d-flex flex-column gap-2 rounded-3 has-discount"
+          >
+            <!-- برچسب تخفیف -->
+            <span class="discount-badge">٪۲۰ تخفیف</span>
+
+            <!-- تصویر -->
+            <a href="#" class="product-image-link">
+              <img
+                class="bookImage"
+                src="../assets/images/sonat_co1-300x450.jpg"
+                alt="کارل مارکس و سنت اندیشهٔ سیاسی در غرب"
+              />
+            </a>
+
+            <!-- عنوان -->
+            <div class="product-title-wrapper">
+              <a class="text-decoration-none productTitle mainText" href="#">
+                کارل مارکس و سنت اندیشهٔ سیاسی در غرب
+              </a>
+            </div>
+
+            <!-- نویسنده و مترجم -->
+            <div class="product-meta">
+              <div>
+                <span class="font300 translaterText">نویسنده:</span>
+                <strong>هانا ارنت</strong>
+              </div>
+              <div>
+                <span class="font300 translaterText">مترجم:</span>
+                <strong>عزت الله فولادوند</strong>
+              </div>
+            </div>
+
+            <!-- قیمت با تخفیف -->
+            <div class="product-price-wrapper">
+              <div class="price-box">
+                <span class="price-old">۴۲۵,۰۰۰ تومان</span>
+                <span class="price">۳۴۰,۰۰۰ تومان</span>
+              </div>
+            </div>
+
+            <!-- دکمه افزودن به سبد خرید -->
+            <span
+              class="addToCartBtn shopping rounded-3 d-flex justify-content-center align-items-center"
+            >
+              <a class="text-decoration-none text-white add-cart" href="#"
+                >افزودن به سبد خرید</a
+              >
+            </span>
+
+            <!-- دکمه قلب -->
+            <div
+              class="heartSvg bg-white px-2 py-2 d-flex justify-content-center align-items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="32"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M256 448l-35-32C118 322 48 259 48 176 48 114 98 64 160 64c35 0 69 17 96 44 27-27 61-44 96-44 62 0 112 50 112 112 0 83-70 146-173 240l-35 32z"
+                />
+              </svg>
+            </div>
+          </li>
         </ul>
 
-        <!-- پیجینیشن -->
         <div
           class="d-flex justify-content-between align-items-center px-4 mr-5"
         >
           <span id="allResult">نمایش 1-20 از 403 نتیجه</span>
         </div>
-        <nav class="pagination" id="paginationContainer"></nav>
+        <nav class="pagination" id="paginationContainer">
+          <ul class="pagination">
+            
+            <li class="page-item next">
+              <a class="page-link" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                >
+                  <polyline
+                    points="9 18 15 12 9 6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="page-item prev">
+              
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item dots">
+              <span class="page-link">…</span>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">11</a>
+            </li>
+            <a class="page-link" href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                >
+                  <polyline
+                    points="15 18 9 12 15 6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </section>
     </main>
     <aside>
-  <div class="cart-sidebar"></div>
-  <div id="cartSidebar" class="cart-sidebar">
-    <div class="cart-header">
-      <h3 class="font700 fs-4">سبد خرید</h3>
-      <span class="font300" id="closeCart">✖</span>
-    </div>
+      <div class="cart-sidebar"></div>
+      <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+          <h3 class="font700 fs-4">سبد خرید</h3>
+          <span class="font300" id="closeCart">✖</span>
+        </div>
 
-    <div id="cartItems"></div>
+        <div id="cartItems"></div>
 
-    <div class="cart-footer price">
-      <h4 class="font700 d-flex justify-content-center align-items-center totalTitle">
-        قیمت کل:
-        <span id="totalPrice">0 تومان</span>
-      </h4>
-    </div>
-    <div class="d-flex justify-content-between p-4 gap-1">
-      <button class="rounded-2 SeeCartPage">
-        <a class="text-decoration-none text-white" href="cart.html">مشاهده سبد خرید</a>
-      </button>
-      <button class="rounded-2 SeeOrderPage">تسویه حساب</button>
-    </div>
-  </div>
-</aside>
+        <div class="cart-footer price">
+          <h4
+            class="font700 d-flex justify-content-center align-items-center totalTitle"
+          >
+            قیمت کل:
+            <span id="totalPrice">0 تومان</span>
+          </h4>
+        </div>
+        <div class="d-flex justify-content-between p-4 gap-1">
+          <button class="rounded-2 SeeCartPage">
+            <a class="text-decoration-none text-white" href="cart.html"
+              >مشاهده سبد خرید</a
+            >
+          </button>
+          <button class="rounded-2 SeeOrderPage">تسویه حساب</button>
+        </div>
+      </div>
+    </aside>
     <footer class="footer">
       <div class="footer-info">
         <img
@@ -544,6 +1304,5 @@
     <script src="../assets/js/jquery-3.7.1.min.js"></script>
     <script src="../assets/js/bootstrap.min.js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/books.js"></script>
   </body>
 </html>

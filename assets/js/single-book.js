@@ -134,13 +134,6 @@
         img.removeEventListener("click", carouselClickHandler);
         img.addEventListener("click", carouselClickHandler);
       });
-
-      // تصاویر کوچک زیر کاروسل
-      const thumbnails = document.querySelectorAll(".carousel-thumbnails img");
-      thumbnails.forEach(function (img) {
-        img.removeEventListener("click", thumbnailClickHandler);
-        img.addEventListener("click", thumbnailClickHandler);
-      });
     }
 
     // هندلر کلیک روی تصاویر کاروسل

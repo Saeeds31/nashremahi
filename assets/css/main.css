@@ -339,7 +339,7 @@ header.fixed {
   max-width: 100%; /* اضافه شد */
   background-color: white;
   position: fixed;
-  top: 54px;
+  top: 46px;
   left: 0; /* اضافه شد */
   right: 0; /* اضافه شد */
   overflow-x: hidden; /* اضافه شد - مخفی کردن اسکرول افقی */
@@ -483,13 +483,6 @@ img {
   font-size: clamp(22px, 2.5vw, 26px);
 }
 
-.products {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  padding: 0 190px;
-}
-
 #cartPortfolio {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -499,136 +492,6 @@ img {
   font-weight: 600;
   color: #54595f;
   font-size: 30px;
-}
-.product-cart {
-  height: 550px;
-}
-
-.product-cart {
-  font-weight: 600;
-  min-height: 450px !important;
-  background: #fff;
-  padding: 16px 14px 18px;
-  border-radius: 12px;
-  border: 1px solid #f0f0f0;
-  transition: all 0.3s ease;
-  position: relative;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  margin: 0;
-}
-
-.product-cart:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-  border-color: var(--main-color);
-  background-color: #e3e1e1 !important;
-}
-
-.product-cart img {
-  transition: transform 0.3s ease;
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  aspect-ratio: 2/3;
-}
-
-.product-cart .productTitle {
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: #1a1a2e;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  min-height: 48px;
-  transition: color 0.3s;
-}
-
-.product-cart .productTitle:hover {
-  color: var(--main-color);
-}
-
-.product-cart .translaterText {
-  font-size: 0.8rem;
-  color: #888;
-}
-
-.product-cart .translaterText + strong {
-  font-size: 0.8rem;
-  color: #1a1a2e;
-}
-
-.product-cart .price {
-  font-weight: 800;
-  color: var(--main-color);
-  font-size: 1rem;
-  text-align: left;
-}
-
-.product-cart .addToCartBtn {
-  background: var(--main-color);
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 0.85rem;
-  transition: all 0.3s;
-  text-align: center;
-  cursor: pointer;
-}
-
-.product-cart .addToCartBtn:hover {
-  background: var(--main-color-dark);
-  transform: scale(1.02);
-}
-
-.product-cart .addToCartBtn a {
-  color: #fff !important;
-  text-decoration: none;
-  display: block;
-}
-
-.product-cart .heartSvg {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: #fff;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: all 0.3s;
-  border: none;
-  padding: 0;
-  color: var(--main-color);
-  border-radius: 50%;
-}
-
-.product-cart .heartSvg:hover {
-  transform: scale(1.1);
-}
-
-.product-cart .heartSvg svg {
-  width: 20px;
-  height: 20px;
-  fill: none;
-  stroke: #ccc;
-  stroke-width: 28;
-  transition: all 0.3s;
-}
-
-.product-cart .heartSvg:hover svg {
-  stroke: #e74c3c;
-}
-
-.product-cart:hover img {
-  transform: scale(0.98);
-}
-.product-cart div:has(a) {
-  min-height: 50px;
 }
 .blog {
   transition: 0.3s ease;
@@ -1623,8 +1486,491 @@ textarea.form-control-custom {
   font-size: 0.9rem;
   margin-bottom: 20px;
 }
+/* ==========================================
+   product-card.css - کارت کتاب استاندارد
+   ========================================== */
 
-/* واکنش‌گرایی */
+/* ===== کارت محصول ===== */
+.product-cart {
+  background: #ffffff;
+  padding: 14px 12px 16px;
+  border-radius: var(--card-radius);
+  border: 1px solid #f0f0f0;
+  transition: all var(--transition-speed) ease;
+  position: relative;
+  box-shadow: var(--card-shadow);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-cart:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--main-color);
+}
+
+/* ===== تصویر ===== */
+.product-image-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  background: #f5f5f5;
+}
+
+.product-image-link .bookImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-speed) ease;
+}
+
+.product-cart:hover .bookImage {
+  transform: scale(1.03);
+}
+
+/* ===== عنوان کتاب ===== */
+.product-title-wrapper {
+  margin-top: 4px;
+  min-height: 46px;
+}
+
+.productTitle {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1a1a2e;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  transition: color var(--transition-speed) ease;
+}
+
+.productTitle:hover {
+  color: var(--main-color);
+}
+
+/* ===== نویسنده و مترجم ===== */
+.product-meta {
+  font-size: 0.8rem;
+  color: #888;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 2px;
+  flex: 1;
+}
+
+.product-meta .translaterText {
+  font-weight: 300;
+  color: #999;
+}
+
+.product-meta strong {
+  color: #1a1a2e;
+  font-weight: 700;
+}
+
+/* ===== قیمت ===== */
+.product-price-wrapper {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid #f5f5f5;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.price-box .price {
+  font-weight: 800;
+  color: var(--main-color);
+  font-size: 0.95rem;
+}
+
+.price-box .price-old {
+  font-weight: 400;
+  color: #999;
+  font-size: 0.8rem;
+  text-decoration: line-through;
+}
+
+/* ===== وضعیت موجودی ===== */
+.stock-status {
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 2px 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.stock-status.in-stock {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.stock-status.out-of-stock {
+  background: #fce4ec;
+  color: #c62828;
+}
+
+/* ===== دکمه افزودن به سبد خرید (همیشه نمایش داده می‌شود) ===== */
+.addToCartBtn {
+  background: var(--main-color);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  transition: all var(--transition-speed) ease;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 6px;
+  width: 100%;
+  min-height: 36px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.addToCartBtn a {
+  color: #fff !important;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.addToCartBtn:hover {
+  background: var(--main-color-dark);
+  transform: scale(1.02);
+}
+
+/* حذف d-none برای نمایش همیشگی */
+.addToCartBtn.d-none {
+  display: flex !important;
+}
+
+/* ===== دکمه قلب (همیشه نمایش داده می‌شود) ===== */
+.heartSvg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  border: none;
+  padding: 0;
+  backdrop-filter: blur(4px);
+  z-index: 2;
+}
+
+/* حذف d-none برای نمایش همیشگی */
+.heartSvg.d-none {
+  display: flex !important;
+}
+
+.heartSvg:hover {
+  transform: scale(1.15) !important;
+}
+
+.heartSvg svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 28;
+  transition: all var(--transition-speed) ease;
+}
+
+.heartSvg:hover svg {
+  stroke: #e74c3c;
+}
+
+.heartSvg.liked svg {
+  fill: #e74c3c;
+  stroke: #e74c3c;
+}
+
+/* ===== تخفیف ===== */
+.discountBox {
+  margin-top: 4px;
+}
+
+.discountBox del {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.discountBox .price {
+  font-weight: 800;
+  color: var(--main-color);
+  font-size: 0.95rem;
+}
+/* ===== برچسب تخفیف ===== */
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 4px;
+  z-index: 3;
+  box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+}
+
+/* ===== قیمت با تخفیف ===== */
+.price-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.price-box .price {
+  font-weight: 800;
+  color: var(--main-color);
+  font-size: 0.95rem;
+  order: 1;
+}
+
+.price-box .price-old {
+  font-weight: 400;
+  color: #999;
+  font-size: 0.8rem;
+  text-decoration: line-through;
+  order: 2;
+}
+
+/* کارت با تخفیف - تنظیم ترتیب */
+.product-cart.has-discount .price-box .price {
+  order: 1;
+}
+
+.product-cart.has-discount .price-box .price-old {
+  order: 2;
+}
+
+/* ===== واکنش‌گرایی قیمت تخفیف ===== */
+@media (max-width: 576px) {
+  .price-box .price {
+    font-size: 0.8rem;
+  }
+
+  .price-box .price-old {
+    font-size: 0.7rem;
+  }
+
+  .discount-badge {
+    font-size: 0.6rem;
+    padding: 2px 8px;
+    top: 8px;
+    right: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .price-box .price {
+    font-size: 0.75rem;
+  }
+  .price-box .price-old {
+    font-size: 0.65rem;
+  }
+}
+/* ===== گرید ===== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* ===== واکنش‌گرایی ===== */
+
+/* تبلت و کوچکتر */
+@media (max-width: 991px) {
+  .products {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+  }
+
+  .product-cart {
+    padding: 12px 10px 14px;
+  }
+
+  .productTitle {
+    font-size: 0.85rem;
+    min-height: 40px;
+  }
+
+  .product-meta {
+    font-size: 0.75rem;
+  }
+
+  .price-box .price {
+    font-size: 0.85rem;
+  }
+
+  .addToCartBtn {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    min-height: 32px;
+  }
+
+  .heartSvg {
+    width: 28px;
+    height: 28px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .heartSvg svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* موبایل */
+@media (max-width: 576px) {
+  .products {
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    gap: 12px;
+  }
+
+  .product-cart {
+    padding: 10px 8px 12px;
+    border-radius: 10px;
+  }
+
+  .product-title-wrapper {
+    min-height: 38px;
+  }
+
+  .productTitle {
+    font-size: 0.8rem;
+    min-height: 36px;
+    -webkit-line-clamp: 2;
+  }
+
+  .product-meta {
+    font-size: 0.7rem;
+    gap: 1px;
+  }
+
+  .product-meta strong {
+    font-size: 0.7rem;
+  }
+
+  .product-price-wrapper {
+    margin-top: 4px;
+    padding-top: 4px;
+  }
+
+  .price-box .price {
+    font-size: 0.8rem;
+  }
+
+  .price-box .price-old {
+    font-size: 0.7rem;
+  }
+
+  .addToCartBtn {
+    font-size: 0.7rem;
+    padding: 5px 8px;
+    min-height: 28px;
+    border-radius: 6px;
+  }
+
+  .heartSvg {
+    width: 24px;
+    height: 24px;
+    top: 6px;
+    left: 6px;
+  }
+
+  .heartSvg svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* موبایل بسیار کوچک */
+@media (max-width: 400px) {
+  .products {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+  }
+
+  .product-cart {
+    padding: 8px 6px 10px;
+  }
+
+  .product-title-wrapper {
+    min-height: 34px;
+  }
+
+  .productTitle {
+    font-size: 0.75rem;
+    min-height: 32px;
+  }
+
+  .product-meta {
+    font-size: 0.65rem;
+  }
+
+  .product-meta strong {
+    font-size: 0.65rem;
+  }
+
+  .price-box .price {
+    font-size: 0.75rem;
+  }
+}
+
+.product-cart.has-discount .price-box {
+  flex-wrap: wrap;
+}
+
+.product-cart.has-discount .price-old {
+  order: 2;
+}
+
+.product-cart.has-discount .price {
+  order: 1;
+}
+
+.product-cart.out-of-stock .price {
+  color: #999;
+}
+
+.product-cart.out-of-stock .addToCartBtn {
+  background: #999;
+}
+
+.product-cart.out-of-stock .addToCartBtn:hover {
+  background: #777;
+}
+
 @media (max-width: 991px) {
   #contactTitle {
     font-size: 2rem;
@@ -1659,6 +2005,44 @@ textarea.form-control-custom {
     height: 250px;
   }
 }
+
+.out-of-stock-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #999;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 4px;
+  z-index: 3;
+}
+
+.price-box .price.out-of-stock {
+  color: #999;
+  font-weight: 700;
+}
+
+.addToCartBtn.out-of-stock-btn {
+  background: #999;
+}
+
+.addToCartBtn.out-of-stock-btn:hover {
+  background: #777;
+}
+
+.product-cart.out-of-stock .price-box .price {
+  color: #999;
+}
+
+.product-cart.out-of-stock .addToCartBtn {
+  background: #999;
+}
+
+.product-cart.out-of-stock .addToCartBtn:hover {
+  background: #777;
+}
 @media (max-width: 1400px) {
   #cartSection {
     padding: 20px 10px !important;
@@ -1669,13 +2053,6 @@ textarea.form-control-custom {
     gap: 40px;
   }
 
-  .product-cart {
-    font-size: small;
-    padding: 18px;
-    background-color: #f2f2f2;
-    width: 205px;
-    height: 400px;
-  }
   header {
     padding: 0px 20px !important;
     justify-content: space-between !important;
@@ -1697,17 +2074,6 @@ textarea.form-control-custom {
 }
 
 @media (max-width: 1200px) {
-  .products {
-    grid-template-columns: repeat(4, 1fr);
-    padding: 0 50px !important;
-  }
-  .product-cart {
-    font-size: small;
-    padding: 18px;
-    background-color: #f2f2f2;
-    width: 205px;
-    height: 450px;
-  }
   #header {
     padding: 0px 10px !important;
     justify-content: space-between !important;
@@ -1770,13 +2136,7 @@ textarea.form-control-custom {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 50px !important;
   }
-  .product-cart {
-    font-size: small;
-    padding: 18px;
-    background-color: #f2f2f2;
-    width: 205px;
-    height: 450px;
-  }
+
   .showAll {
     position: absolute;
     top: 0;
@@ -1831,13 +2191,7 @@ textarea.form-control-custom {
     min-width: 100%;
     flex: none;
   }
-  .product-cart {
-    font-size: small;
-    padding: 18px;
-    background-color: #f2f2f2;
-    width: 205px;
-    height: 450px;
-  }
+
   .footer-menu {
     width: 100%;
   }
@@ -1845,11 +2199,6 @@ textarea.form-control-custom {
   .enamad {
     width: 100%;
     text-align: center;
-  }
-
-  .products {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 0 120px !important;
   }
 
   #cartPortfolio li {
@@ -1902,17 +2251,6 @@ textarea.form-control-custom {
     align-items: center;
   }
 
-  .product-cart {
-    font-size: small;
-    padding: 18px;
-    background-color: #f2f2f2;
-    width: 205px;
-    height: 520px;
-  }
-  .products {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 0 70px !important;
-  }
   #allResult {
     display: flex !important;
     justify-content: center !important;
@@ -1957,17 +2295,7 @@ textarea.form-control-custom {
   .membership {
     width: 300px;
   }
-  .products {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 130px !important;
-  }
-  .product-cart {
-    font-size: small;
-    padding: 18px;
-    background-color: #f2f2f2;
-    width: 205px;
-    height: 520px;
-  }
+
   #blog {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
@@ -2011,10 +2339,6 @@ textarea.form-control-custom {
   }
 }
 @media (max-width: 600px) {
-  .products {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 90px !important;
-  }
   .input-item {
     width: 300px !important;
   }
@@ -2036,9 +2360,6 @@ textarea.form-control-custom {
     width: 280px !important;
   }
 
-  .products {
-    padding: 0 50px !important;
-  }
   header {
     padding: 0px 36px !important;
 
@@ -2062,16 +2383,7 @@ textarea.form-control-custom {
   .hero {
     width: 93%;
   }
-  .product-cart {
-    font-size: small;
-    padding: 18px;
-    background-color: #f2f2f2;
-    width: 205px;
-    height: 520px;
-  }
-  .product-cart .productTitle {
-    min-height: 42px;
-  }
+
   #allResult {
     display: flex !important;
     justify-content: center !important;
@@ -2104,24 +2416,16 @@ textarea.form-control-custom {
     justify-content: center;
     align-items: center;
   }
+  #logo-img {
+    width: 80px;
+    height: auto;
+  }
 }
 
 @media (max-width: 480px) {
-  .suggested-products-grid .product-cart {
-    padding: 12px 10px 14px;
-  }
-
-  .suggested-products-grid .product-cart .productTitle {
-    font-size: 0.85rem;
-    min-height: 40px;
-  }
   .addToCartBtn {
     font-size: 12px;
     width: 100%;
-  }
-  #logo-img {
-    width: 80px;
-    height: 40px;
   }
 
   #headerSvg {
@@ -2149,11 +2453,6 @@ textarea.form-control-custom {
     margin-top: 30px;
   }
 
-  .products {
-    padding: 0 10px !important;
-    gap: 4px !important;
-  }
-
   header {
     padding: 10px 10px !important;
     padding-right: 40px !important ;
@@ -2173,29 +2472,6 @@ textarea.form-control-custom {
   .membership {
     padding-right: 150px !important;
   }
-  .product-cart {
-    font-size: small;
-    padding: 8px;
-    background-color: #f2f2f2;
-    width: 95%;
-    height: 480px;
-  }
-  .product-cart {
-    font-weight: 600;
-    min-height: 450px !important;
-  }
-  .product-cart.hasDiscount:hover {
-    height: 480px !important;
-  }
-  .product-cart div:has(a) {
-    min-height: unset !important;
-    height: 60px; /* ارتفاع ثابت */
-    line-height: 20px; /* ارتفاع هر خط */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal; /* اجازه شکستن خطوط را می‌دهد */
-    word-wrap: break-word;
-  }
 }
 
 @media (max-width: 380px) {
@@ -2205,11 +2481,6 @@ textarea.form-control-custom {
     margin-top: 6px;
     margin-right: 0;
     background-color: white;
-    width: 380px;
-  }
-  .product-cart {
-    font-weight: 600;
-    min-height: 490px !important;
   }
   .input-item {
     width: 250px !important;
