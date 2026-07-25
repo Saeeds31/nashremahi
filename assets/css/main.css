@@ -94,6 +94,7 @@ header {
   background: white;
   transition: all 0.3s ease;
   padding: 10px 80px;
+  position: relative;
 }
 
 header.fixed {
