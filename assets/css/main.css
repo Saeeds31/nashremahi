@@ -376,10 +376,13 @@ header.fixed {
   height: 300px;
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 12px;
   z-index: 20;
   overflow-x: hidden; /* اضافه شد */
   box-sizing: border-box; /* اضافه شد */
+}
+header {
+  position: relative;
 }
 .qty-controls button {
   border: unset;
@@ -1723,6 +1726,7 @@ textarea.form-control-custom {
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  
   gap: 20px;
   list-style: none;
   padding: 0;
@@ -1734,11 +1738,11 @@ textarea.form-control-custom {
 
 /* تبلت و کوچکتر */
 @media (max-width: 991px) {
-  main{
+  main {
     padding-top: 24px;
   }
   .products {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns:repeat(auto-fill, minmax(180px, 1fr));
     gap: 16px;
   }
 
