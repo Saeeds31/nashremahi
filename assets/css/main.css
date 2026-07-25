@@ -339,7 +339,7 @@ header.fixed {
   max-width: 100%; /* اضافه شد */
   background-color: white;
   position: fixed;
-  top: 46px;
+  top: 60px;
   left: 0; /* اضافه شد */
   right: 0; /* اضافه شد */
   overflow-x: hidden; /* اضافه شد - مخفی کردن اسکرول افقی */
@@ -424,7 +424,7 @@ img {
 }
 
 .hero {
-  width: 73%;
+  width: 100%;
   height: auto;
   margin: 0 auto;
 }
@@ -467,9 +467,10 @@ img {
 .menuBar {
   display: none;
   position: absolute;
-  top: 20px;
+  top: 50%;
   right: 10px;
   z-index: 20;
+  transform: translateY(-40%);
 }
 
 .menu {
@@ -2197,7 +2198,6 @@ textarea.form-control-custom {
 
 @media (max-width: 1200px) {
   #header {
-    padding: 10px 56px !important;
     justify-content: space-between !important;
     align-items: center !important;
   }
@@ -2434,9 +2434,6 @@ textarea.form-control-custom {
   #heroSectionAboutUs img {
     height: 300px;
   }
-  .hero {
-    width: 93%;
-  }
 
   .mainTitle h2 {
     font-size: 22px !important;
@@ -2499,10 +2496,6 @@ textarea.form-control-custom {
 
   .blog {
     width: 100% !important;
-  }
-
-  .hero {
-    width: 93%;
   }
 
   #allResult {
