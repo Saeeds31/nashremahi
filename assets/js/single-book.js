@@ -256,13 +256,7 @@
       attachToCarouselImages();
       startObserving();
 
-      // اتصال به تصاویر کوچک (thumbnail)
-      const thumbnails = document.querySelectorAll(".carousel-thumbnails img");
-      thumbnails.forEach(function (thumb) {
-        thumb.removeEventListener("click", thumbnailClickHandler);
-        thumb.addEventListener("click", thumbnailClickHandler);
-      });
-
+      
       // همچنین روی تغییر اسلاید کاروسل، تصاویر رو دوباره متصل کنیم
       const carouselElement = document.getElementById("bookCarousel");
       if (carouselElement) {

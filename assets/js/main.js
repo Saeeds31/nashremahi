@@ -189,24 +189,24 @@
   const searchBtn = document.querySelector(".searchSvg");
   const searchWrapper = document.querySelector(".search-wrapper");
   const searchInput = document.getElementById("searchInput");
+  const searchSpan = document.getElementById("searchSpan");
 
   if (searchBtn && searchWrapper && searchInput) {
+    // ===== توابع باز و بسته کردن =====
     function closeSearch() {
       searchWrapper.classList.remove("active");
       searchInput.blur();
-      searchWrapper.style.borderBottom = "0 !important";
-      searchWrapper.style.border = "0 !important";
-      searchWrapper.style.outline = "0 !important";
+      searchInput.value = ""; // خالی کردن اینپوت
     }
 
     function openSearch() {
       searchWrapper.classList.add("active");
-      searchInput.focus();
-      searchWrapper.style.borderBottom = "0 !important";
-      searchWrapper.style.border = "0 !important";
-      searchWrapper.style.outline = "0 !important";
+      setTimeout(() => {
+        searchInput.focus();
+      }, 400);
     }
 
+    // ===== کلیک روی دکمه جستجو =====
     searchBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       if (searchWrapper.classList.contains("active")) {
@@ -216,14 +216,56 @@
       }
     });
 
-    document.addEventListener("click", (e) => {
-      if (!searchWrapper.contains(e.target) && !searchBtn.contains(e.target)) {
+    // ===== کلیک روی دکمه "جستجو" =====
+    if (searchSpan) {
+      searchSpan.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const query = searchInput.value.trim();
+        if (query) {
+          console.log("جستجو برای:", query);
+          // اینجا کد جستجوی شما
+          // window.location.href = `/search?q=${encodeURIComponent(query)}`;
+        } else {
+          searchInput.focus();
+          searchInput.style.borderColor = "#ef4444";
+          setTimeout(() => {
+            searchInput.style.borderColor = "";
+          }, 1000);
+        }
+      });
+    }
+
+    // ===== کلیک روی پس‌زمینه (خارج از باکس) =====
+    searchWrapper.addEventListener("click", (e) => {
+      if (e.target === searchWrapper) {
         closeSearch();
       }
     });
 
-    searchWrapper.addEventListener("click", (e) => {
-      e.stopPropagation();
+    // ===== کلیک روی خود باکس (جلوگیری از بسته شدن) =====
+    const searchContainer = document.querySelector(".search-container");
+    if (searchContainer) {
+      searchContainer.addEventListener("click", (e) => {
+        e.stopPropagation();
+      });
+    }
+
+    // ===== کلیک با دکمه ESC =====
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && searchWrapper.classList.contains("active")) {
+        closeSearch();
+      }
+    });
+
+    // ===== کلیک روی هر جای صفحه (بکاپ) =====
+    document.addEventListener("click", (e) => {
+      if (
+        searchWrapper.classList.contains("active") &&
+        !searchWrapper.contains(e.target) &&
+        !searchBtn.contains(e.target)
+      ) {
+        closeSearch();
+      }
     });
 
     console.log("✅ جستجو فعال شد");

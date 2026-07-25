@@ -403,49 +403,6 @@ body {
   margin: 0;
   padding: 0;
 }
-.search-wrapper {
-  position: absolute;
-
-  top: 120px;
-
-  left: 90px;
-
-  transform: translateY(-50%);
-
-  width: 0;
-
-  overflow: hidden;
-
-  transition: 0.35s ease;
-  background-color: white;
-  border: 1px solid #ddd;
-}
-
-.search-wrapper.active {
-  width: 320px;
-}
-
-#searchInput {
-  width: 100%;
-
-  height: 42px;
-
-  border: 1px solid #ddd !important;
-
-  outline: none;
-
-  background: transparent;
-
-  font-size: 16px;
-
-  direction: rtl;
-
-  padding: 0 10px;
-}
-
-#searchInput::placeholder {
-  color: #999;
-}
 
 .searchSvg {
   width: 20px;
@@ -457,12 +414,7 @@ body {
 
   position: relative;
 }
-#searchSpan {
-  color: white;
-  background-color: #333;
-  padding: 8px 12px;
-  border: 1px solid #4e4646;
-}
+
 #header {
   position: relative;
 }
@@ -473,7 +425,7 @@ img {
 
 .hero {
   width: 73%;
-  height: 57vh;
+  height: auto;
   margin: 0 auto;
 }
 #login {
@@ -843,34 +795,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.search-wrapper.active {
-  border-bottom: none !important; /* حذف کامل border-bottom در حالت active */
-}
-
-/* یا اگر border در حالت focus است */
-.search-wrapper:focus-within {
-  border-bottom: none;
-}
-/* حذف کامل هرگونه border از search-wrapper */
-.search-wrapper,
-.search-wrapper.active,
-.search-wrapper:focus,
-.search-wrapper:focus-within {
-  border: none !important;
-  border: unset !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* اگر border روی input داخلش هست */
-.search-wrapper input,
-.search-wrapper input:focus,
-.search-wrapper input:active {
-  border: none !important;
-  border-bottom: none !important;
-  outline: none !important;
-  box-shadow: none !important;
 }
 .button-orang {
   background-color: var(--main-color);
@@ -1835,18 +1759,6 @@ textarea.form-control-custom {
     padding: 6px 10px;
     min-height: 32px;
   }
-
-  .heartSvg {
-    width: 28px;
-    height: 28px;
-    top: 12px;
-    left: 12px;
-  }
-
-  .heartSvg svg {
-    width: 16px;
-    height: 16px;
-  }
 }
 
 /* موبایل */
@@ -1899,17 +1811,9 @@ textarea.form-control-custom {
     min-height: 28px;
     border-radius: 6px;
   }
-
   .heartSvg {
-    width: 24px;
-    height: 24px;
-    top: 12px;
-    left: 12px;
-  }
-
-  .heartSvg svg {
-    width: 14px;
-    height: 14px;
+    top: 8px;
+    left: 8px;
   }
 }
 
@@ -2045,6 +1949,222 @@ textarea.form-control-custom {
 .heartSvg.actived svg {
   fill: red;
 }
+/* ===== استایل باکس جستجو ===== */
+.search-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 20px;
+}
+
+.search-wrapper.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== کانتینر باکس جستجو ===== */
+.search-container {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform: scale(0.9) translateY(-20px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-wrapper.active .search-container {
+  transform: scale(1) translateY(0);
+}
+
+/* ===== آیکون جستجو ===== */
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.search-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ===== اینپوت جستجو ===== */
+#searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: #1e293b;
+  padding: 12px 0;
+  font-family: inherit;
+  min-width: 0;
+  direction: rtl;
+}
+
+#searchInput::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+#searchInput:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* ===== دکمه جستجو ===== */
+.search-btn {
+  background: linear-gradient(
+    135deg,
+    var(--main-color),
+    var(--main-color-dark)
+  );
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+}
+
+.search-btn:active {
+  transform: translateY(0);
+}
+
+/* ===== افکت ریپل برای دکمه ===== */
+.search-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.6s,
+    height 0.6s;
+}
+
+.search-btn:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* ===== استایل موبایل ===== */
+@media (max-width: 768px) {
+  .search-wrapper {
+    padding: 15px;
+  }
+
+  .search-container {
+    padding: 10px 14px;
+    border-radius: 16px;
+    max-width: 100%;
+  }
+
+  #searchInput {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+
+  .search-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  .search-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    padding: 8px 12px;
+    border-radius: 14px;
+    flex-wrap: nowrap;
+  }
+
+  #searchInput {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  .search-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+    border-radius: 8px;
+  }
+
+  .search-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* ===== انیمیشن‌های اضافی ===== */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.search-wrapper.active .search-btn {
+  animation: pulse 2s infinite;
+}
+
+/* ===== اسکرول مخفی برای اینپوت ===== */
+#searchInput::-webkit-search-decoration,
+#searchInput::-webkit-search-cancel-button,
+#searchInput::-webkit-search-results-button,
+#searchInput::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* ===== رفع مشکل در فایرفاکس ===== */
+#searchInput::-moz-search-clear-button {
+  display: none;
+}
+
 @media (max-width: 1400px) {
   #cartSection {
     padding: 20px 10px !important;
@@ -2077,7 +2197,7 @@ textarea.form-control-custom {
 
 @media (max-width: 1200px) {
   #header {
-    padding: 0px 10px !important;
+    padding: 10px 56px !important;
     justify-content: space-between !important;
     align-items: center !important;
   }
@@ -2229,7 +2349,7 @@ textarea.form-control-custom {
     height: 16px !important;
   }
   header {
-    padding: 0px 56px !important;
+    padding: 10px 56px !important;
 
     display: flex;
     justify-content: space-between;
@@ -2237,7 +2357,7 @@ textarea.form-control-custom {
   }
   #logo-img {
     width: 90px;
-    height: 50px;
+    height: auto;
   }
 }
 
@@ -2246,7 +2366,7 @@ textarea.form-control-custom {
     display: none !important;
   }
   header {
-    padding: 0px 56px !important;
+    padding: 10px 56px !important;
 
     display: flex;
     justify-content: space-between;
@@ -2316,7 +2436,6 @@ textarea.form-control-custom {
   }
   .hero {
     width: 93%;
-    height: auto;
   }
 
   .mainTitle h2 {
@@ -2519,23 +2638,7 @@ textarea.form-control-custom {
     width: 300px !important;
   }
 }
-@media (max-width: 768px) {
-  .search-wrapper {
-    transform: translateX(-50px) !important;
-    /* یا اگر می‌خواهید با margin کار کنید: */
-    /* margin-left: -100px !important; */
-  }
-}
 
-/* اگر می‌خواهید فقط در حالت active این تغییر اعمال شود */
-@media (max-width: 768px) {
-  .search-wrapper.active {
-    transform: unset !important;
-    width: 95% !important;
-    left: 2.5px;
-    top: 62px;
-  }
-} /* حذف padding-right اضافی از membership */
 @media (max-width: 1100px) {
   #login {
     padding: 10px 20px !important;
