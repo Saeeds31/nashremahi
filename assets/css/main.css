@@ -1733,6 +1733,9 @@ textarea.form-control-custom {
 
 /* تبلت و کوچکتر */
 @media (max-width: 991px) {
+  main{
+    padding-top: 24px;
+  }
   .products {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 16px;
