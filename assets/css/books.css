@@ -416,11 +416,6 @@ main {
     padding: 0 8px;
   }
 
-  .products {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 16px;
-    padding: 0 8px;
-  }
   .search-icon {
     display: none;
   }
