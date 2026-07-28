@@ -93,7 +93,7 @@ header {
   width: 100%;
   background: white;
   transition: all 0.3s ease;
-  padding: 10px 80px;
+  padding: 0 80px;
   position: relative;
 }
 
@@ -1772,10 +1772,7 @@ textarea.form-control-custom {
 
 /* موبایل */
 @media (max-width: 576px) {
-  .products {
-    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
-    gap: 12px;
-  }
+  
 
   .product-cart {
     padding: 10px 8px 12px;
@@ -1820,10 +1817,7 @@ textarea.form-control-custom {
     min-height: 28px;
     border-radius: 6px;
   }
-  .heartSvg {
-    top: 8px;
-    left: 8px;
-  }
+ 
 }
 
 /* موبایل بسیار کوچک */
