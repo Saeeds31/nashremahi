@@ -140,7 +140,7 @@ header.fixed {
   margin: 0 auto;
 }
 .btn-theme {
-  border:1.5px solid #f97321;
+  border: 1.5px solid #f97321;
   min-width: 220px;
   transition: all 0.5s;
   background: transparent;
@@ -1780,7 +1780,7 @@ textarea.form-control-custom {
 }
 @media (max-width: 991px) {
   .products {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+    grid-template-columns: repeat(4, 1fr) !important;
     gap: 16px;
   }
 
@@ -2124,6 +2124,10 @@ textarea.form-control-custom {
 
 /* ===== استایل موبایل ===== */
 @media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
   .search-wrapper {
     padding: 15px;
   }
