@@ -272,14 +272,6 @@
 main {
   padding: 0 10%;
 }
-.products {
-  display: grid;
-  grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
-  gap: 24px;
-  list-style: none;
-  margin: 0 0 24px 0;
-  padding: 0;
-}
 #productsContainer {
   width: 100%;
 }

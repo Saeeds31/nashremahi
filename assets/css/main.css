@@ -1747,9 +1747,8 @@ textarea.form-control-custom {
 /* ===== گرید ===== */
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
-  gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
   list-style: none;
   padding: 0;
   margin: 0 auto;
@@ -1758,32 +1757,33 @@ textarea.form-control-custom {
 
 /* ===== واکنش‌گرایی ===== */
 
-/* تبلت و کوچکتر */
-
-@media (min-width: 991px) {
+/* md: 768px به بالا → 2 ستون */
+@media (min-width: 768px) {
   .products {
-    grid-template-columns: repeat(5, 1fr) !important;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 1400px) {
+/* lg: 992px به بالا → 3 ستون */
+@media (min-width: 992px) {
   .products {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* xl و بالاتر: 1200px به بالا → 4 ستون */
+@media (min-width: 1200px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media (max-width: 1500px) {
   header.fixed {
     padding: 0 2%;
   }
 }
 @media (max-width: 991px) {
-  .products {
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 16px;
-  }
-
   .product-cart {
     padding: 12px 10px 14px;
   }
@@ -1857,11 +1857,6 @@ textarea.form-control-custom {
 
 /* موبایل بسیار کوچک */
 @media (max-width: 400px) {
-  .products {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 10px;
-  }
-
   .product-cart {
     padding: 8px 6px 10px;
   }
@@ -2124,10 +2119,6 @@ textarea.form-control-custom {
 
 /* ===== استایل موبایل ===== */
 @media (max-width: 768px) {
-  .products {
-    grid-template-columns: repeat(3, 1fr) !important;
-  }
-
   .search-wrapper {
     padding: 15px;
   }
@@ -2156,11 +2147,6 @@ textarea.form-control-custom {
 }
 
 @media (max-width: 480px) {
-  .products {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
-    gap: 12px;
-    padding: 0 4px;
-  }
   .search-container {
     padding: 8px 12px;
     border-radius: 14px;
