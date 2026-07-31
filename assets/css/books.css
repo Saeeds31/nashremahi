@@ -422,11 +422,7 @@ main {
 }
 
 @media (max-width: 480px) {
-  .products {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 12px;
-    padding: 0 4px;
-  }
+
 
   .pagination a,
   .pagination span {

@@ -106,6 +106,9 @@
   }
 }
 
+.products {
+  width: 100%;
+}
 @media (min-width: 1200px) {
   .single-book-main .container-fluid {
     padding-left: 80px !important;
