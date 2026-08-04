@@ -115,6 +115,10 @@ header.fixed {
     top: 0;
   }
 }
+#logo-img {
+  width: 50px;
+  height: auto;
+}
 .MenuItemLink {
   border-bottom: 3px solid var(--main-color);
 }
@@ -191,9 +195,6 @@ header.fixed {
 }
 .mainSectionText {
   width: 90%;
-}
-.translaterText {
-  font-size: 13px;
 }
 .hover-orange:hover {
   color: var(--main-color) !important;
@@ -559,8 +560,8 @@ img {
 }
 
 .footer-logo {
-  width: 40px;
-  height: 80px;
+  width: 20%;
+  height: auto;
   margin-bottom: 25px;
 }
 
@@ -1514,12 +1515,6 @@ textarea.form-control-custom {
   flex-direction: column;
   gap: 2px;
   margin-top: 2px;
-  flex: 1;
-}
-
-.product-meta .translaterText {
-  font-weight: 300;
-  color: #999;
 }
 
 .product-meta strong {
@@ -1529,7 +1524,7 @@ textarea.form-control-custom {
 
 /* ===== قیمت ===== */
 .product-price-wrapper {
-  margin-top: 6px;
+  margin-top: auto;
   padding-top: 6px;
   border-top: 1px solid #f5f5f5;
 }
@@ -1611,12 +1606,12 @@ textarea.form-control-custom {
 /* ===== دکمه قلب (همیشه نمایش داده می‌شود) ===== */
 .heartSvg {
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: 1.2rem;
+  right: 1.1rem;
   background: rgba(255, 255, 255, 0.92) !important;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex !important;
   align-items: center;
   justify-content: center;
@@ -1675,7 +1670,7 @@ textarea.form-control-custom {
 .discount-badge {
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   background: #e74c3c;
   color: #fff;
   font-size: 0.7rem;
@@ -1732,7 +1727,7 @@ textarea.form-control-custom {
     font-size: 0.6rem;
     padding: 2px 8px;
     top: 8px;
-    right: 8px;
+    left: 8px;
   }
 }
 
@@ -1937,7 +1932,7 @@ textarea.form-control-custom {
 .out-of-stock-badge {
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   background: #999;
   color: #fff;
   font-size: 0.7rem;
